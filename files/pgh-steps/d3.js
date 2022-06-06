@@ -18,7 +18,7 @@ Promise.all(promises).then(data => {
     let svg = d3.select("#map").append("svg")
         .attr("viewBox", "0 0 300 300")
         .attr("preserveAspectRatio", "xMidYMid meet")
-        .style("background-color", "lightgrey")
+        // .style("background-color", "lightgrey")
         .attr("width", width)
         .attr("height", height);
 
@@ -73,7 +73,7 @@ Promise.all(promises).then(data => {
         .attr("transform", d => `translate(${projection([d.lat, d.long])})`)
         .attr("d", d => spike(d.properties.number_of_steps ? (d.properties.number_of_steps / 2.5) : 1))
         .attr("fill", "forestgreen")
-        .attr("fill-opacity", 0.5)
+        .attr("fill-opacity", 0.4)
         .attr("stroke", "darkgreen")
 
     let legend = svg.append("g")

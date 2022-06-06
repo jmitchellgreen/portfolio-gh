@@ -76,9 +76,11 @@ hr {
     }
 
     .project {
-        border-width: 2px;
+        /* border-width: 2px;
         border-style: solid;
-        border-color: #0b4f6cff;
-        padding: 10px;
+        border-color: #0b4f6cff; */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
     }
 }
