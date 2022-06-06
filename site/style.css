@@ -34,7 +34,7 @@ hr {
     }
 
     p {
-        font-size: x-large;
+        font-size: large;
     }
 
     body {
@@ -82,5 +82,15 @@ hr {
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 30px;
+    }
+
+    footer {
+        background-color: #0b4f6cff;
+        color: #639a88ff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 25vh;
     }
 }
