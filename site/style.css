@@ -6,15 +6,23 @@ html {
     font-family: 'Major Mono Display', monospace;
 }
 
+a {
+    color: #639a88ff;
+}
+
+hr {
+    color: #0b4f6cff;
+}
+
 @media only screen and (max-width: 600px) {
     h1 {
-        height: 50vh;
-        font-size: 500%;
+        height: 10vh;
+        font-size: 200%;
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         text-align: center;
     }
 
@@ -25,6 +33,10 @@ html {
         text-align: center;
     }
 
+    p {
+        font-size: x-large;
+    }
+
     body {
         background-color: #FFF7DF;
         color: #0b4f6cff;
@@ -33,7 +45,18 @@ html {
     .sidebar {
         background-color: #0b4f6cff;
         color: #FFF7DF;
-        height: 100vh;
+        height: 10vh;
     }
 
+    details>summary {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #0b4f6cff;
+        padding: 4px;
+        margin: 0;
+    }
 }
