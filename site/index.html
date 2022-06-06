@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>JMG</title>
 </head>
@@ -15,114 +16,115 @@
 <body>
     <div class="sidebar">
         <h1>Mitchell Green</h1>
-    </div>
-    <div class="about">
-        <h2>About</h2>
-        <p class="head">jamesmitchellgreen@yahoo.com</p>
-        <p class="head"><a href="https://www.linkedin.com/in/jmitchellgreen/">LinkedIn</a></p>
-        <details>
-            <summary>Open for more</summary>
-            <p>I'm current a GIS Specialist at <a href="https://gaiconsultants.com/">GAI Consultants</a>
-                where he works full time for <a href="https://www.avangridrenewables.com/">Avangrid Renewables</a>
-                building apps, drawing maps, and managing geospatial data for utility scale solar
-                and wind energy projects.
-            </p>
-            <p>
-                I studied Geographic Science at <a href="https://www.jmu.edu">James Madison University</a>
-                focusing in applied Geographic Information Systems (GIS) and environmental
-                sustainability.
-            </p>
-            <p>
-                Some noteworthy projects at James Madison include <a
-                    href="https://www.energy.gov/eere/articles/california-state-university-maritime-academy-and-james-madison-university-claim-top">winning
-                    1st place in</a> the Collegiate Wind Competition,
-                creating a <a href="https://github.com/jmitchellgreen/auditory-data-representation">custom QGIS
-                    Plugin</a>,
-                and receiving JMU's 2020 Geographer of the Year award.
-            </p>
-        </details>
-        <p>I'm looking to grow as a geospatial software engineer.</p>
-        <hr>
-    </div>
-    <div class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Every building in Pittsburgh, PA, 2022</h3>
-            <h4>[Mapbox GL, Python, OpenStreetMap, Node.js]</h4>
-            <object data="../files//pgh-buildings/index.html"></object>
-        </div>
-        <div class="project">
-            <h3>COVID-19 Deaths in the US, 2022</h3>
-            <h4>[D3.js]</h4>
-            <img src="../files/other/recording.gif">
-        </div>
-        <div class="project">
-            <h3>Every step in Pittsburgh, PA, 2022</h3>
-            <h4>[D3.js]</h4>
-            <object data="../files/pgh-steps/index.html" style="height: 350px; width: 100%;"></object>
-        </div>
-        <div class="project">
-            <h3>Oil and Gas Emssions, New Mexico, 2022</h3>
-            <h4>[Python, Geopandas, Matplotlib]</h4>
-            <img src="../files/other/fig.png">
-        </div>
-        <div class="project">
-            <h3>Flora Fun, 2021</h3>
-            <h4>[C#, ASP.NET]</h4>
-            <iframe src="https://gs-notion.com/FloraFun"></iframe>
-        </div>
-        <div class="project">
-            <h3>Collegiate Wind Competition, 2020</h3>
-            <h4>[ArcPro, OpenWind]</h4>
-            <img src="../files/other/cwc-main.jpg">
-        </div>
-        <div class="project">
-            <h3>Collegiate Wind Competition, 2020</h3>
-            <h4>[ArcPro, OpenWind]</h4>
-            <img src="../files/other/maps-cwc.jpg">
-        </div>
-        <div class="project">
-            <h3>Custom QGIS Plugin, 2020</h3>
-            <h4>[QGIS, Python]</h4>
-            <img src="../files/other/qgis.png">
-        </div>
-        <div class="project">
-            <h3>US Power Plants, 2020</h3>
-            <h4>[ArcPro]</h4>
-            <img src="../files/other/power_____plants.jpg">
-        </div>
-        <div class="project">
-            <h3>Northwestern US, 2019</h3>
-            <h4>[ArcMap]</h4>
-            <img src="../files/other/green_geog365_northwest-1.png">
-        </div>
-        <div class="project">
-            <h3>Alabama, 2019</h3>
-            <h4>[ArcPro, Adobe Illustrator]</h4>
-            <img src="../files/other/green_geog365_columbus_col.png">
-        </div>
-        <div class="project">
-            <h3>Otter Tail County, MN, 2019</h3>
-            <h4>[ArcMap]</h4>
-            <img src="../files/other/green_geog365_otter_tail-1.jpg">
-        </div>
-        <div class="project">
-            <h3>Virginia Population, 2019</h3>
-            <h4>[ArcMap]</h4>
-            <img src="../files/other/green_geog365_virginia_pop-1.jpg">
-        </div>
-        <div class="project">
-            <h3>Mountain Top Removal, WV, 2018</h3>
-            <h4>[PCI Geomatica]</h4>
-            <img src="../files/other/mountain top removal.png">
-        </div>
-    </div>
-    <footer>
-        <p>
-            Last Updated:
-            <script> document.write(new Date().toLocaleDateString()); </script>
+        <p id="email">jamesmitchellgreen@yahoo.com</p>
+        <p id="li"><a href="https://www.linkedin.com/in/jmitchellgreen/"><i class="fa fa-linkedin-square"
+                    style="font-size: 36px;"></i></a>
         </p>
-    </footer>
+    </div>
+    <div class="main">
+        <div class="about">
+            <h2>About</h2>
+            <p>I'm looking to grow as a geospatial software engineer.</p>
+            <details>
+                <summary>Open for more</summary>
+                <p>I'm currently a GIS Specialist at <a href="https://gaiconsultants.com/">GAI Consultants</a>
+                    where he works full time for <a href="https://www.avangridrenewables.com/">Avangrid Renewables</a>
+                    building apps, drawing maps, and managing geospatial data for utility scale solar
+                    and wind energy projects.
+                </p>
+                <p>
+                    I studied Geographic Science at <a href="https://www.jmu.edu">James Madison University</a>
+                    focusing in applied Geographic Information Systems (GIS) and environmental
+                    sustainability.
+                </p>
+                <p>
+                    Some noteworthy projects at James Madison include <a
+                        href="https://www.energy.gov/eere/articles/california-state-university-maritime-academy-and-james-madison-university-claim-top">winning
+                        1st place in</a> the Collegiate Wind Competition,
+                    creating a <a href="https://github.com/jmitchellgreen/auditory-data-representation">custom QGIS
+                        Plugin</a>,
+                    and receiving JMU's 2020 Geographer of the Year award.
+                </p>
+            </details>
+        </div>
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Every building in Pittsburgh, PA, 2022</h3>
+                <h4>[Mapbox GL, Python, OpenStreetMap, Node.js]</h4>
+                <object data="../files//pgh-buildings/index.html"></object>
+            </div>
+            <div class="project">
+                <h3>COVID-19 Deaths in the US, 2022</h3>
+                <h4>[D3.js]</h4>
+                <img src="../files/other/recording.gif">
+            </div>
+            <div class="project">
+                <h3>Every step in Pittsburgh, PA, 2022</h3>
+                <h4>[D3.js]</h4>
+                <object data="../files/pgh-steps/index.html" style="height: 350px; width: 100%;  display: flex;
+                justify-content: center;"></object>
+            </div>
+            <div class="project">
+                <h3>Oil and Gas Emssions, New Mexico, 2022</h3>
+                <h4>[Python, Geopandas, Matplotlib]</h4>
+                <img src="../files/other/fig.png">
+            </div>
+            <div class="project">
+                <h3>Flora Fun, 2021</h3>
+                <h4>[C#, ASP.NET]</h4>
+                <iframe src="https://gs-notion.com/FloraFun"></iframe>
+            </div>
+            <div class="project">
+                <h3>Collegiate Wind Competition, 2020</h3>
+                <h4>[ArcPro, OpenWind]</h4>
+                <img src="../files/other/cwc-main.jpg">
+            </div>
+            <div class="project">
+                <h3>Collegiate Wind Competition, 2020</h3>
+                <h4>[ArcPro, OpenWind]</h4>
+                <img src="../files/other/maps-cwc.jpg">
+            </div>
+            <div class="project">
+                <h3>Custom QGIS Plugin, 2020</h3>
+                <h4>[QGIS, Python]</h4>
+                <img src="../files/other/qgis.png">
+            </div>
+            <div class="project">
+                <h3>US Power Plants, 2020</h3>
+                <h4>[ArcPro]</h4>
+                <img src="../files/other/power_____plants.jpg">
+            </div>
+            <div class="project">
+                <h3>Northwestern US, 2019</h3>
+                <h4>[ArcMap]</h4>
+                <img src="../files/other/green_geog365_northwest-1.png">
+            </div>
+            <div class="project">
+                <h3>Alabama, 2019</h3>
+                <h4>[ArcPro, Adobe Illustrator]</h4>
+                <img src="../files/other/green_geog365_columbus_col.png">
+            </div>
+            <div class="project">
+                <h3>Otter Tail County, MN, 2019</h3>
+                <h4>[ArcMap]</h4>
+                <img src="../files/other/green_geog365_otter_tail-1.jpg">
+            </div>
+            <div class="project">
+                <h3>Virginia Population, 2019</h3>
+                <h4>[ArcMap]</h4>
+                <img src="../files/other/green_geog365_virginia_pop-1.jpg">
+            </div>
+            <div class="project">
+                <h3>Mountain Top Removal, WV, 2018</h3>
+                <h4>[PCI Geomatica]</h4>
+                <img src="../files/other/mountain top removal.png">
+            </div>
+        </div>
+        <footer>
+            <p>Last Updated: 6/6/2022</p>
+        </footer>
+    </div>
 </body>
 
 </html>

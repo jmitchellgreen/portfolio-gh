@@ -94,3 +94,71 @@ hr {
         height: 25vh;
     }
 }
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        background-color: #FFF7DF;
+        color: #0b4f6cff;
+    }
+
+    .sidebar {
+        height: 100%;
+        position: fixed;
+        width: 25vw;
+        top: 0;
+        left: 0;
+        background-color: #0b4f6cff;
+        color: #FFF7DF;
+    }
+
+    #email {
+        font-size: 1.5vw;
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+    }
+
+    #li {
+        position: absolute;
+        left: 10px;
+        bottom: 25px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main {
+        margin-left: 25vw;
+    }
+
+    img,
+    iframe {
+        height: 75vh;
+        width: 100%;
+        object-fit: contain;
+    }
+
+
+    .project {
+        padding: 5px;
+        border-bottom: 2px solid #0b4f6cff;
+    }
+
+
+    footer {
+        background-color: #639a88ff;
+        color: #0b4f6cff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        height: 10vh;
+        margin: 0;
+        padding: 0;
+    }
+}
