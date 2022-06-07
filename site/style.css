@@ -14,6 +14,31 @@ hr {
     color: #0b4f6cff;
 }
 
+li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    font-size: x-large;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro ul {
+    display: inline-block;
+}
+
+.intro li {
+    text-align: left;
+}
+
 @media only screen and (max-width: 600px) {
     h1 {
         height: 10vh;
@@ -123,6 +148,19 @@ hr {
         margin-top: 0;
         background-color: #0b4f6cff;
         color: #FFF7DF;
+    }
+
+
+    details {
+        text-align: center;
+    }
+
+    details p {
+        text-align: left;
+        width: 30vw;
+        margin: 0;
+        padding: 25px;
+        margin: 0 auto;
     }
 
     #email {
