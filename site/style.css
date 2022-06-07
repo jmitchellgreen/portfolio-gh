@@ -6,6 +6,10 @@ html {
     font-family: 'Major Mono Display', monospace;
 }
 
+h2 {
+    margin: 15px;
+}
+
 a {
     color: #639a88ff;
 }
@@ -24,7 +28,7 @@ ul {
     position: relative;
     list-style: none;
     padding: 15px;
-    font-size: x-large;
+    font-size: large;
 }
 
 .intro {
@@ -33,6 +37,7 @@ ul {
 
 .intro ul {
     display: inline-block;
+    margin: 0;
 }
 
 .intro li {
