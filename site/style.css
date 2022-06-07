@@ -26,13 +26,6 @@ hr {
         text-align: center;
     }
 
-    h2 {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        text-align: center;
-    }
-
     p {
         font-size: large;
     }
@@ -45,9 +38,17 @@ hr {
     .sidebar {
         background-color: #0b4f6cff;
         color: #FFF7DF;
-        height: 10vh;
+        height: 25vh;
         position: sticky;
         top: 0;
+    }
+
+    #li,
+    #email {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
     }
 
     details>summary {
@@ -76,12 +77,16 @@ hr {
     }
 
     .project {
-        /* border-width: 2px;
-        border-style: solid;
-        border-color: #0b4f6cff; */
+        padding: 20px;
+        border-bottom: 2px solid #0b4f6cff;
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 30px;
+    }
+
+    .about {
+        border-bottom: 2px solid #0b4f6cff;
+        padding-bottom: 20px;
     }
 
     footer {
@@ -102,53 +107,64 @@ hr {
         color: #0b4f6cff;
     }
 
+    h1 {
+        padding: 10px;
+    }
+
     .sidebar {
         height: 100%;
         position: fixed;
         width: 25vw;
         top: 0;
+        padding: 0;
         left: 0;
+        margin-top: 0;
         background-color: #0b4f6cff;
         color: #FFF7DF;
     }
 
     #email {
-        font-size: 1.5vw;
         position: absolute;
-        left: 10px;
+        font-size: 1.5vw;
         bottom: 0;
+        padding: 10px;
     }
 
     #li {
         position: absolute;
-        left: 10px;
-        bottom: 25px;
+        left: 10vw;
+        bottom: 30px;
+        padding: 10px;
     }
 
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .about {
+        border-bottom: 2px solid #0b4f6cff;
+        padding-bottom: 20px;
+        padding: 10px;
     }
 
     .main {
         margin-left: 25vw;
     }
 
+    .contact>p {
+        position: fixed;
+        background-color: #0b4f6cff;
+        color: #FFF7DF;
+    }
+
     img,
-    iframe {
+    iframe,
+    object {
         height: 75vh;
         width: 100%;
         object-fit: contain;
     }
 
-
     .project {
-        padding: 5px;
+        padding: 20px;
         border-bottom: 2px solid #0b4f6cff;
     }
-
 
     footer {
         background-color: #639a88ff;
