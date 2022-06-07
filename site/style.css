@@ -156,11 +156,11 @@ ul {
     }
 
 
-    details {
+    .more {
         text-align: center;
     }
 
-    details p {
+    .more p {
         text-align: left;
         width: 30vw;
         margin: 0;
@@ -178,7 +178,7 @@ ul {
     #li {
         position: absolute;
         left: 10vw;
-        bottom: 30px;
+        bottom: 5vw;
         padding: 10px;
     }
 
