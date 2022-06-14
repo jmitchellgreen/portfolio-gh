@@ -32,7 +32,7 @@ Promise.all(promises).then(data => {
     svg.append("path")
         .datum(data[0])
         .style("fill", "none")
-        .style("stroke", "#639a88ff;")
+        .style("stroke", "#639a88ff")
         .style("stroke-width", "0.5px")
         .attr("d", geopath)
 
