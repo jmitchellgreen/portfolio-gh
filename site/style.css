@@ -44,6 +44,7 @@ ul {
     text-align: left;
 }
 
+
 @media only screen and (max-width: 600px) {
     h1 {
         height: 10vh;
@@ -55,6 +56,7 @@ ul {
         align-items: center;
         text-align: center;
     }
+
 
     p {
         font-size: large;
@@ -68,29 +70,19 @@ ul {
     .sidebar {
         background-color: #0b4f6cff;
         color: #FFF7DF;
-        height: 25vh;
+        padding: 15px;
         position: sticky;
+
         top: 0;
     }
 
-    #li,
-    #email {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+    .externals {
         text-align: center;
-    }
-
-    details>summary {
-        display: flex;
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
         justify-content: center;
-        align-items: flex-end;
-        text-align: center;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #0b4f6cff;
-        padding: 5px;
-        margin: 0;
+        align-items: center;
     }
 
     img,
@@ -126,9 +118,8 @@ ul {
         justify-content: center;
         align-items: flex-end;
         text-align: center;
-        height: 10vh;
         margin: 0;
-        padding: 0;
+        padding: 15px;
     }
 }
 
@@ -141,6 +132,7 @@ ul {
 
     h1 {
         padding: 10px;
+        text-align: center;
     }
 
     .sidebar {
@@ -155,6 +147,15 @@ ul {
         color: #FFF7DF;
     }
 
+    .externals {
+        position: fixed;
+        bottom: 5vh;
+        text-align: center;
+        width: 25%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
 
     .more {
         text-align: center;
@@ -166,20 +167,6 @@ ul {
         margin: 0;
         padding: 25px;
         margin: 0 auto;
-    }
-
-    #email {
-        position: absolute;
-        font-size: 1.5vw;
-        bottom: 0;
-        padding: 10px;
-    }
-
-    #li {
-        position: absolute;
-        left: 10vw;
-        bottom: 5vw;
-        padding: 10px;
     }
 
     .about {

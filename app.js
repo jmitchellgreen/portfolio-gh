@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/site')
 })
 
+app.get('/pgh-buildings', (req, res) => {
+  res.sendFile(__dirname + '/site/projects/pgh-buildings.html')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

@@ -21,33 +21,27 @@
     <div class="contact">
         <div class="sidebar">
             <h1>Mitchell Green</h1>
-            <p id="email">jamesmitchellgreen@yahoo.com</p>
-            <p id="li"><a href="https://www.linkedin.com/in/jmitchellgreen/"><i class="fa fa-linkedin-square"
-                        style="font-size: 36px;"></i></a>
-            </p>
+            <div id="globe"></div>
+            <div class="externals">
+                <p>&#128231; <a href="mailto: jamesmitchellgreen@yahoo.com">Email</a></p>
+                <p>&#128195; <a href="./files/other/J. Mitchell Green Resume.pdf" download>Resume</a></p>
+                <p>&#129309; <a href="https://www.linkedin.com/in/jmitchellgreen/">LinkedIn</a></p>
+            </div>
         </div>
     </div>
     <div class="main">
         <div class="about">
-            <h2 id="about-h2">About</h2>
-            <!-- <div class="intro">
-                <ul>
-                    <li>Aspiring geospatial software developer.</li>
-                    <li>Current GIS Specialist.</li>
-                    <li>Former Geography student.</li>
-                </ul>
-            </div> -->
-            <!-- <details>
-                <summary>More about me</summary> -->
             <div class="more">
                 <p style="font-size:48px;">Hi, I'm Mitchell &#128075</p>
-                <p>I'm currently a GIS Specialist &#127758; at <a href="https://gaiconsultants.com/">GAI Consultants</a>
+                <p>I'm currently a <abbr title="Geographic Information Systems">GIS</abbr> Specialist &#127758; at <a
+                        href="https://gaiconsultants.com/">GAI Consultants</a>
                     where I work full time for <a href="https://www.avangridrenewables.com/">Avangrid Renewables</a>
                     building apps &#128296;, drawing maps &#128506;&#65039;, and managing geospatial
-                    data &#127760; for solar &#127774; and wind energy projects &#127811;.
+                    data &#127760; for solar &#127774; and wind &#128168; energy projects.
                 </p>
                 <p>
-                    Scroll down &#11015;&#65039; to take a look at some of my personal projects &#128187;!
+                    Scroll down &#11015;&#65039; to take a look at some of my coding &#128104;&#8205;&#128187;
+                    exercises!
                 </p>
             </div>
             <!-- </details> -->
@@ -59,28 +53,42 @@
                 <h4>[Mapbox GL, Python, OpenStreetMap, Node.js]</h4>
                 <object data="../files//pgh-buildings/index.html">Interactive Map of 3d buildings in Pittsburgh,
                     PA</object>
+                <h5>**INTERACTIVE**</h5>
+                <p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
+                    single building in Allegheny County. This project is made with Maplibre, an open-source fork of the
+                    popular Mapbox GL web mapping javascript library. The building data comes from OpenStreetMap's (OSM)
+                    API including OSM's own query language. The data is converted into a <code>geoJSON</code> using a
+                    python script.</p>
             </div>
             <div class="project">
-                <h3>COVID-19 Deaths in the US, 2022</h3>
+                <h3>COVID-19 in the United States, 2022</h3>
                 <h4>[D3.js]</h4>
                 <img src="../files/other/recording.gif" alt="GIF Line chart of COVID-19 in the United States">
+                <p>This sobering chart visualizes the 1 million deaths and the 7 day rolling average
+                    cases (as of May 2022). The left axis and red line show the 7 day average of cases in the United
+                    States, while the right axis and blue line display total deaths. This GIF was made with d3.js. Data
+                    sourced from the CDC.</p>
             </div>
             <div class="project">
                 <h3>Number of steps per public staircase in Pittsburgh, PA, 2022</h3>
                 <h4>[D3.js]</h4>
                 <object data="../files/pgh-steps/index.html" style="height: 350px; width: 100%;  display: flex;
                 justify-content: center;">Spike map of heights of steps in Pittsburgh, PA</object>
-            </div>
-            <div class="project">
-                <h3>Oil and Gas Emissions, New Mexico, 2022</h3>
-                <h4>[Python, Geopandas, Matplotlib]</h4>
-                <img src="../files/other/fig.png" alt="Map of Oil and gas emissions in New Mexico">
+                <p>Pittsburgh is hilly. Each spike is a public staircase, and the length is the number of steps. Data
+                    sourced from the Western Pennsylvania Regional Data Center. City steps found <a
+                        href="https://data.wprdc.org/dataset/city-steps">here.</a></p>
             </div>
             <div class="project">
                 <h3>Flora Fun, 2021</h3>
                 <h4>[C#, ASP.NET]</h4>
                 <iframe src="https://gs-notion.com/FloraFun"
                     aria-label="Flora Fun website to search house plants scrapped from wikihow"></iframe>
+                <h5>**INTERACTIVE**</h5>
+                <p>The above is an embeded website (original found <a href="www.gs-notion.com/FloraFun">here</a>) built
+                    by myself and a friend. We web scrape Wikihow's plant section and display infromation on house plant
+                    care.
+                    </a>
+                </p>
             </div>
             <div class="project">
                 <h3>Collegiate Wind Competition, 2020</h3>
@@ -130,9 +138,11 @@
             </div>
         </div>
         <footer>
-            <p>Coded with &#10084;&#65039; in Pittsburgh, PA</p>
+            <p>Coded with &#10084;&#65039; in Pittsburgh, PA &#128205;</p>
         </footer>
     </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
