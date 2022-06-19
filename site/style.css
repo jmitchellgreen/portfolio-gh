@@ -44,6 +44,25 @@ ul {
     text-align: left;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #e6dec9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #639a88ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0b4f6cff;
+}
 
 @media only screen and (max-width: 600px) {
     h1 {
