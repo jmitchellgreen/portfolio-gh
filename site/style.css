@@ -221,9 +221,9 @@ ul {
         object-fit: contain;
     }
 
-    #weather4youPic {
+    /* #weather4youPic {
         display: none;
-    }
+    } */
 
     .project {
         padding: 20px;
