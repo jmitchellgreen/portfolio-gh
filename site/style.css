@@ -64,6 +64,8 @@ ul {
     background: #0b4f6cff;
 }
 
+/* If broswer window is less than 600px... */
+/* (Mobile) */
 @media only screen and (max-width: 600px) {
     h1 {
         height: 10vh;
@@ -112,6 +114,10 @@ ul {
         object-fit: scale-down;
     }
 
+    #weather4youObj {
+        display: none;
+    }
+
     #map {
         display: flex;
         justify-content: center;
@@ -142,6 +148,9 @@ ul {
     }
 }
 
+
+/* If broswer window is greater than 600px... */
+/* (Desktop) */
 @media only screen and (min-width: 600px) {
 
     body {
@@ -210,6 +219,10 @@ ul {
         height: 75vh;
         width: 100%;
         object-fit: contain;
+    }
+
+    #weather4youPic {
+        display: none;
     }
 
     .project {
