@@ -1,7 +1,4 @@
 {
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
-  },
   "hosting": {
     "public": "site",
     "ignore": [
@@ -12,7 +9,7 @@
     "rewrites": [
       {
         "source": "/**",
-        "destination": "site/files/weather4you/build/index.html"
+        "destination": "/weather4you.html"
       }
     ]
   }
