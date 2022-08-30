@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Mitchell Green</title>
     <meta name="description"
         content="Mitchell's portfolio including GIS maps, coding, scripting, and software development/engineer projects">
@@ -21,12 +21,15 @@
     <div class="contact">
         <div class="sidebar">
             <h1>J. Mitchell Green</h1>
-            <div id="globe"></div>
-            <div class="externals">
-                <p>&#128104;&#8205;&#128187; <a href="https://github.com/jmitchellgreen">Github</a></p>
-                <p>&#128231; <a href="mailto: jamesmitchellgreen@yahoo.com">Email</a></p>
-                <p>&#128195; <a href="./files/other/J. Mitchell Green Resume.pdf" download>Resume</a></p>
-                <p>&#129309; <a href="https://www.linkedin.com/in/jmitchellgreen/">LinkedIn</a></p>
+            <!-- <div id="globe"></div> -->
+            <img id="headshot" alt="Headshot of Mitchell" src="./files/other/headshot.jpg" />
+            <div class="externals-wrapper">
+                <div class="externals">
+                    <p>&#128104;&#8205;&#128187; <a href="https://github.com/jmitchellgreen">Github</a></p>
+                    <p>&#128231; <a href="mailto: jamesmitchellgreen@yahoo.com">Email</a></p>
+                    <p>&#128195; <a href="./files/other/J. Mitchell Green Resume.pdf" download>Resume</a></p>
+                    <p>&#129309; <a href="https://www.linkedin.com/in/jmitchellgreen/">LinkedIn</a></p>
+                </div>
             </div>
         </div>
     </div>
@@ -55,7 +58,7 @@
                 </a>
                 <h4>[Javascript, React.js, Mapbox/Maplibre GL JS, Recharts]</h4>
                 <!-- <object id="weather4youObj" data="../files/weather4you/build/index.html" style="height: 90vh"></object> -->
-                <img id="weather4youPic" src="../files/other/weather4you.PNG" />
+                <img id="weather4youPic" src="./files/other/weather4you.PNG" />
                 <!-- <h5>**INTERACTIVE**</h5> -->
                 <p>Weather4you is a front-end web application written with Javascript, React.js, Maplibre GL JS, and
                     Recharts.
@@ -70,7 +73,7 @@
                     <h3>Fast Find OpenStreetMap</h3>
                 </a>
                 <h4>[Python]</h4>
-                <img src="../files/other/fastfindosm.PNG" style="height: 300px" alt="Picture of Python terminal code">
+                <img src="./files/other/fastfindosm.PNG" style="height: 300px" alt="Picture of Python terminal code">
                 <p>Fast find OSM is a Python command line interface for quickly searching and
                     downloading geojson of vector features. For instance, to run type:
                     <code> python -m fastfindosm -s "Paris" paris_texas.geojson</code>
@@ -82,7 +85,7 @@
                     <h3>Every building in Pittsburgh, PA, 2022</h3>
                 </a>
                 <h4>[Mapbox/Maplibre GL JS, Python, OpenStreetMap, Node.js]</h4>
-                <object data="../files/pgh-buildings/index.html">Interactive Map of 3d buildings in Pittsburgh,
+                <object data="./files/pgh-buildings/index.html">Interactive Map of 3d buildings in Pittsburgh,
                     PA</object>
                 <h5>**INTERACTIVE**</h5>
                 <p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
@@ -97,7 +100,7 @@
             <div class="project">
                 <h3>COVID-19 in the United States, 2022</h3>
                 <h4>[D3.js]</h4>
-                <img src="../files/other/recording.gif" alt="GIF Line chart of COVID-19 in the United States">
+                <img src="./files/other/recording.gif" alt="GIF Line chart of COVID-19 in the United States">
                 <p>This sobering chart visualizes the 1 million deaths and the 7 day rolling average
                     cases (as of May 2022). The left axis and red line show the 7 day average of cases in the United
                     States, while the right axis and blue line display total deaths. This GIF was made with d3.js.
@@ -131,7 +134,7 @@
             <div class="project">
                 <h3>Collegiate Wind Competition, 2020</h3>
                 <h4>[ArcPro, OpenWind]</h4>
-                <img src="../files/other/cwc-main.jpg" alt="Map of hypothetical wind turbine farm in Colorado">
+                <img src="./files/other/cwc-main.jpg" alt="Map of hypothetical wind turbine farm in Colorado">
                 <p>
                     This map is an overview of our hypothetical wind turbine farm as part of the 2020 Collegiate
                     Wind
@@ -145,7 +148,7 @@
             <div class="project">
                 <h3>Collegiate Wind Competition, 2020</h3>
                 <h4>[ArcPro, OpenWind]</h4>
-                <img src="../files/other/maps-cwc.jpg" alt="Grid of maps for hypothetical wind turbines">
+                <img src="./files/other/maps-cwc.jpg" alt="Grid of maps for hypothetical wind turbines">
                 <p>
                     This grid of maps depicts the hypothetical wind boundary outline and the multiple factors of
                     consideration when siting a wind farm. Contributed to the 2020 Collegiate Wind Competition.
@@ -154,7 +157,7 @@
             <div class="project">
                 <h3>Custom QGIS Plugin, 2020</h3>
                 <h4>[QGIS, Python]</h4>
-                <img src="../files/other/qgis.png" alt="Screenshot of a QGIS python dialogue box">
+                <img src="./files/other/qgis.png" alt="Screenshot of a QGIS python dialogue box">
                 <p>
                     Source code found <a href="https://github.com/jmitchellgreen/auditory-data-representation">here</a>
                     on github, this senior year project investigates the feasibility of using sound as a medium for
@@ -165,7 +168,7 @@
             <div class="project">
                 <h3>US Power Plants, 2020</h3>
                 <h4>[ArcPro]</h4>
-                <img src="../files/other/power_____plants.jpg" alt="Map of power plants in the United States">
+                <img src="./files/other/power_____plants.jpg" alt="Map of power plants in the United States">
                 <p>
                     This colorful map illustrates the spread of power plants in the United States from 2018.
                 </p>
@@ -182,7 +185,7 @@
             <div class="project">
                 <h3>Alabama, 2019</h3>
                 <h4>[ArcPro, Adobe Illustrator]</h4>
-                <img src="../files/other/green_geog365_columbus_col.png" alt="Simple map of Alabama">
+                <img src="./files/other/green_geog365_columbus_col.png" alt="Simple map of Alabama">
                 <p>
                     A simple yet thoughtful reference map of Alabama. Created using ArcPro and Adobe Illustrator.
                 </p>
@@ -190,7 +193,7 @@
             <div class="project">
                 <h3>Otter Tail County, MN, 2019</h3>
                 <h4>[ArcMap]</h4>
-                <img src="../files/other/green_geog365_otter_tail-1.jpg" alt="Map of Otter Tail County, MN">
+                <img src="./files/other/green_geog365_otter_tail-1.jpg" alt="Map of Otter Tail County, MN">
                 <p>
                     Map of Otter Tail County, MN. This exercise in ArcMap's Mapblex Label engine for fine tuning
                     map labeling's detail and design.
@@ -207,7 +210,7 @@
             <div class="project">
                 <h3>Mountain Top Removal, WV, 2018</h3>
                 <h4>[PCI Geomatica]</h4>
-                <img src="../files/other/mountain top removal.png"
+                <img src="./files/other/mountain top removal.png"
                     alt="Colorful raster image of mountain top removal in West Virginia">
                 <p>Raster analysis of satellite imagery for mountain top removal in West Virginia. The pink areas
                     describes high levels of earth removal.</p>

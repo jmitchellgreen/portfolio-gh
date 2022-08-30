@@ -64,6 +64,31 @@ ul {
     background: #0b4f6cff;
 }
 
+
+.externals-wrapper {
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+.externals {
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 10px solid #ffffddff;
+    border-radius: 100%;
+    padding: 0px;
+    width: 18vw;
+    height: 18vw;
+}
+
 /* If broswer window is less than 600px... */
 /* (Mobile) */
 @media only screen and (max-width: 600px) {
@@ -97,13 +122,14 @@ ul {
         top: 0;
     }
 
-    .externals {
-        text-align: center;
-        width: 90%;
-        position: relative;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
+    .externals-wrapper {
+        top: 2vh;
+    }
+
+    #headshot {
+        width: 50vw;
+        height: 50vw;
+        line-height: 50vw;
     }
 
     img,
@@ -175,15 +201,16 @@ ul {
         color: #FFF7DF;
     }
 
-    .externals {
-        position: fixed;
-        bottom: 5vh;
+    /* .externals-wrapper {
         text-align: center;
-        width: 25%;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
     }
+
+    .externals {
+        bottom: 5vh;
+        text-align: left;
+        margin: 0 auto;
+        display: inline-block;
+    } */
 
     .more {
         text-align: center;
