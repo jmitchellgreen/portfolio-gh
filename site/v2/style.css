@@ -1,10 +1,6 @@
 html,
 body {
-    font-family: 'Dongle', sans-serif;
-    background-color: black;
-    height: 100%;
-    margin: 0;
-    color: white;
+    font-family: 'DM Mono', sans-serif;
 }
 
 h1 {
@@ -12,25 +8,57 @@ h1 {
     margin: 0;
 }
 
-.navbar {
-    background-color: white;
-    width: 10vw;
+.nav-top {
+    width: 15vw;
     height: 100%;
     margin: 0;
     padding: 0;
-    color: black;
     position: fixed;
     overflow: auto;
 }
 
+#fname h1 {
+    writing-mode: vertical-lr;
+    font-size: 50px;
+    z-index: 1;
+    margin: 2vh;
+    cursor: pointer;
+}
+
+.nav-bottom {
+    position: sticky;
+    bottom: 0;
+}
+
+#fname button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 #lname {
     position: absolute;
-    color: #00A881;
     top: 50%;
     left: 50%;
-    margin-left: 10vw;
-    font-size: 40vw;
+    margin-left: 5vw;
+    font-size: 30vw;
     transform: translateX(-55%) translateY(-50%);
 }
 
-@media screen and (min-width: 480px) {}
+
+/* mobile screens */
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        height: 10vh;
+    }
+
+    #lname {
+        transform: translateX(-50%) translateY(-50%);
+        margin-left: auto;
+    }
+}
