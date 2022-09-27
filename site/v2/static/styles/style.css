@@ -12,7 +12,7 @@ body {
 
 a {
     color: inherit;
-    text-decoration-style: dotted;
+    /* text-decoration-style: dashed; */
     text-decoration-thickness: 0.4rem;
 }
 
@@ -31,7 +31,7 @@ a {
 
 .nav {
     width: 10vw;
-    position: absolute;
+    position: fixed;
     height: 100vh;
 }
 
@@ -47,13 +47,22 @@ ul {
     text-align: end;
 }
 
+
+/* all other pages */
 main {
-    padding-left: 5vw;
+    /* padding-left: 20vw; */
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-
 /* mobile screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
+
+    main {
+        padding-top: 20vh;
+    }
 
     #name {
         font-size: 20vw;
@@ -61,23 +70,35 @@ main {
         transform: translateX(-50%) translateY(-50%);
     }
 
-    .nav {
+    #home,
+    ul {
         display: inline-block;
-        width: 100%;
-        height: 10vh;
+        position: relative;
+        padding: 0;
     }
 
     ul {
-        position: relative;
+        position: absolute;
+        right: 5vw;
+        top: .2vw;
+    }
+
+    .nav {
+        width: 100%;
+        height: fit-content;
+        position: fixed;
+        top: 0;
+        background-color: white;
     }
 
     li {
-        display: inline-block;
         text-align: center;
+        font-size: 4vw;
+        padding-bottom: 5px;
     }
 
     #home {
         writing-mode: horizontal-tb;
-        font-size: 15vw;
+        font-size: 10vw;
     }
 }
