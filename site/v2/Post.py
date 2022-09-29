@@ -4,6 +4,7 @@
 
 from typing import List
 import datetime
+import inspect
 
 
 class Post:
@@ -26,3 +27,11 @@ class Post:
         self.repo_link = repo_link
         self.short_desc = short_desc
         self.thumbnail = thumbnail
+        self.create_post()
+
+    def create_post(self):
+        pass
+
+
+# Post __init__ args
+print(inspect.getfullargspec(Post().__init__).annotations)
