@@ -62,7 +62,7 @@ main {
 }
 
 img {
-    max-width: inherit;
+    max-width: 500px;
 }
 
 /* mobile screens */
@@ -110,4 +110,9 @@ img {
         writing-mode: horizontal-tb;
         font-size: 10vw;
     }
+
+    img {
+        max-width: 90vw;
+    }
+
 }
