@@ -9,6 +9,9 @@ body {
     background: #639a88ff;
 }
 
+a:hover {
+    text-decoration-color: #639a88ff;
+}
 
 a {
     color: inherit;
@@ -58,11 +61,16 @@ main {
     padding: 5px;
 }
 
+img {
+    max-width: inherit;
+}
+
 /* mobile screens */
 @media screen and (max-width: 650px) {
 
     main {
-        padding-top: 20vh;
+        padding-top: 10vh;
+        max-width: 90vw;
     }
 
     #name {

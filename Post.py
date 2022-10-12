@@ -41,7 +41,7 @@ class Post:
 
 
 # Post __init__ args
-print(inspect.getfullargspec(Post().__init__).annotations)
+# print(inspect.getfullargspec(Post().__init__).annotations)
 
 
 if __name__ == "__main__":
