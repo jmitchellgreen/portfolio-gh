@@ -16,8 +16,7 @@ def about():
 
 @app.route("/archive")
 def posts():
-    print(archive())  # pass to archive.html
-    return render_template("archive/archive.html")
+    return render_template("archive/archive.html", my_archive=archive())
 
 
 @app.route("/archive/<post_title>")
