@@ -16,9 +16,10 @@ for proj in each_proj:
     tags = proj.h4.text
     content = proj.p.text
     try:
-        img = proj.img.src
+        img = proj.img["src"]
+        file_path = img.split("/")
+        image = file_path[-1]
     except:
-        pass
-
-    # p = Post(url=url, title=title, tags=tags, thumbnail=img, content=content)
-    # p.create_post()
+        continue
+    p = Post(url=url, title=title, tags=tags, thumbnail=image, content=content)
+    p.create_post()

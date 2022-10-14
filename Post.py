@@ -50,7 +50,7 @@ class Post:
                             </a>
                         </div>
                         <!-- Thumbnail -->
-                        <img src="{{ url_for('static', filename='images/{self.thumbnail}') }}" alt="">
+                        <img src="{{{{ url_for('static', filename='images/{self.thumbnail}') }}}}" alt="">
                         <!-- Content -->
                         <p>{self.content}</p>
                     </main>
