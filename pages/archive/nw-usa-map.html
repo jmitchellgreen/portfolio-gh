@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+                    {% block content %}
+                    <main>
+                        <!-- Title -->
+                        <h1>Northwestern US, 2019</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">[ArcMap]</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{ url_for('static', filename='images/None') }" alt="">
+                        <!-- Content -->
+                        <p>
+                        The Northwestern United States, a reference map created in Arcmap featuring an globe
+                        inset map, city population, and elevation data.
+                    </p>
+                    </main>
+                    {% endblock %}

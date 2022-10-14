@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+                    {% block content %}
+                    <main>
+                        <!-- Title -->
+                        <h1>Number of steps per public staircase in Pittsburgh, PA, 2022</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">[D3.js]</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{ url_for('static', filename='images/None') }" alt="">
+                        <!-- Content -->
+                        <p>Pittsburgh is hilly. Each spike is a public staircase, and the height is the number of steps.
+                        Data
+                        sourced from the Western Pennsylvania Regional Data Center. City steps data found here.</p>
+                    </main>
+                    {% endblock %}

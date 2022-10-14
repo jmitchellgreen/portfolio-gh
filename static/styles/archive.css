@@ -1,0 +1,17 @@
+.tags h4 {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 0.2em;
+}
+
+.tags h4:hover {
+    background-color: #639a88ff;
+}
+
+.tags a {
+    text-decoration: none;
+}
+
+img {
+    padding-top: 10px;
+}

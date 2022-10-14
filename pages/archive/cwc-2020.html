@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+                    {% block content %}
+                    <main>
+                        <!-- Title -->
+                        <h1>Collegiate Wind Competition, 2020</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">[ArcPro, OpenWind]</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{ url_for('static', filename='images/None') }" alt="">
+                        <!-- Content -->
+                        <p>
+                        This map is an overview of our hypothetical wind turbine farm as part of the 2020 Collegiate
+                        Wind
+                        Competition hosted by the Department of Energy. Part of the siting team presentation, this map
+                        helped propel our team (James Madison University) to 1st place
+                        in
+                        the competition!
+                    </p>
+                    </main>
+                    {% endblock %}

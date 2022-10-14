@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+                    {% block content %}
+                    <main>
+                        <!-- Title -->
+                        <h1>Alabama, 2019</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">[ArcPro, Adobe Illustrator]</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{ url_for('static', filename='images/None') }" alt="">
+                        <!-- Content -->
+                        <p>
+                        A simple yet thoughtful reference map of Alabama. Created using ArcPro and Adobe Illustrator.
+                    </p>
+                    </main>
+                    {% endblock %}

@@ -19,6 +19,7 @@ class Post:
         repo_link: str = None,
         short_desc: str = None,
         thumbnail: str = None,
+        content: str = None,
         year: int = datetime.date.today().year,
         custom_page: bool = False,
     ) -> None:
@@ -28,26 +29,30 @@ class Post:
         self.repo_link = repo_link
         self.short_desc = short_desc
         self.thumbnail = thumbnail
+        self.content = content
         self.year = year
         self.custom_page = custom_page
-        self.create_post()
 
-    def create_post(self) -> None:
-        if self.url is not None:
-            archive_path = "pages\\archive\\"
-            mypath = os.path.join(archive_path, self.url)
-            if not os.path.isdir(mypath):
-                os.makedirs(mypath)
-
-
-# Post __init__ args
-# print(inspect.getfullargspec(Post().__init__).annotations)
-
-
-if __name__ == "__main__":
-    my_url = str(sys.argv[1])
-    p = Post(url=my_url)
-    with open(
-        os.path.join(f"pages\\archive\\{p.url}", "setting.json"), "w"
-    ) as settings:
-        json.dump(p.__dict__, settings)
+    def create_post(self):
+        with open(f"./pages/archive/{self.url}.html", "w") as post:
+            post.write(
+                f"""{{% extends "base.html" %}}
+                    {{% block content %}}
+                    <main>
+                        <!-- Title -->
+                        <h1>{self.title}</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">{self.tags}</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{{ url_for('static', filename='images/{self.thumbnail}') }}" alt="">
+                        <!-- Content -->
+                        <p>{self.content}</p>
+                    </main>
+                    {{% endblock %}}"""
+            )

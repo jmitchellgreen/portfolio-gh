@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+                    {% block content %}
+                    <main>
+                        <!-- Title -->
+                        <h1>Collegiate Wind Competition, 2020</h1>
+                        <!-- Year -->
+                        <h2></h2>
+                        <!-- Tags -->
+                        <div class="tags">
+                            <a href="/tags/">
+                                <h4 style="display: inline;">[ArcPro, OpenWind]</h4>
+                            </a>
+                        </div>
+                        <!-- Thumbnail -->
+                        <img src="{ url_for('static', filename='images/None') }" alt="">
+                        <!-- Content -->
+                        <p>
+                        This grid of maps depicts the hypothetical wind boundary outline and the multiple factors of
+                        consideration when siting a wind farm. Contributed to the 2020 Collegiate Wind Competition.
+                    </p>
+                    </main>
+                    {% endblock %}
