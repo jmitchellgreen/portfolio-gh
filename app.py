@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from archive import archive
 
 app = Flask(__name__, template_folder="pages")
 
@@ -15,6 +16,7 @@ def about():
 
 @app.route("/archive")
 def posts():
+    print(archive())  # pass to archive.html
     return render_template("archive/archive.html")
 
 

@@ -2,6 +2,7 @@
 #### github: jmitchellgreen
 
 
+from turtle import update
 from typing import List
 import datetime
 import inspect
@@ -34,7 +35,7 @@ class Post:
         self.custom_page = custom_page
 
     def create_post(self):
-        with open(f"./pages/archive/{self.url}.html", "w") as post:
+        with open(f"./pages/archive/posts/{self.url}.html", "w") as post:
             post.write(
                 f"""{{% extends "base.html" %}}
                     {{% block content %}}
