@@ -21,4 +21,4 @@ def posts():
 
 @app.route("/archive/<post_title>")
 def post(post_title):
-    return render_template(f"archive/{post_title}.html")
+    return render_template(f"archive/posts/{post_title}.html")

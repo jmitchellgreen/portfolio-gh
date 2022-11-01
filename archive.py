@@ -14,9 +14,9 @@ def archive():
         with open(f"./pages/archive/posts/{file}") as f:
             soup = BeautifulSoup(f, features="html.parser")
             archive_obj = {
-                "url": file,
+                "url": file[:-5],
                 "title": soup.h1.text,
-                "thumbnail": soup.img["src"],
+                "thumbnail": "static/" + soup.img["src"][31:-5],
                 "tags": soup.h4.text,
             }
             my_archive.append(archive_obj)

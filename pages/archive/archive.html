@@ -3,8 +3,14 @@
 <main>
     <h1>archive</h1>
     <br>
-    {% for i in my_archive %}
-    <p>{{ i }}</p>
-    {% endfor %}
+    <div class="grid-container">
+        <div class="grid-item">
+            {% for i in my_archive %}
+            <a href="archive/{{ i.url }}"><img src=" {{ i.thumbnail }} "></a>
+            <h2>{{ i.title }}</h2>
+            <p>{{ i.tags }}</p>
+            {% endfor %}
+        </div>
+    </div>
 </main>
 {% endblock %}
