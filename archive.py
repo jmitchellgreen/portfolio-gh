@@ -1,4 +1,3 @@
-from black import mypyc_attr
 from Post import Post
 from bs4 import BeautifulSoup
 import os
