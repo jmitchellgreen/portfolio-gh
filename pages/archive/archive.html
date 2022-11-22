@@ -9,7 +9,14 @@
             <a href="archive/{{ i.url }}">
                 <h2>{{ i.title }}</h2>
             </a>
-            <p>{{ i.tags }}</p>
+            <div class="tags">
+                {% for tag in i.tags %}
+                <a href="/tags/{{ tag }}">
+                    <h4 style="display: inline; margin: 5px;">{{ tag }}</h4>
+                </a>
+                {% endfor %}
+            </div>
+            <hr>
             {% endfor %}
         </div>
     </div>
