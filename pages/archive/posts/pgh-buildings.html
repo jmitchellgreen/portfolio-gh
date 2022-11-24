@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-                    {% block content %}
-                    <main>
-                        <!-- Title -->
-                        <h1>Every building in Pittsburgh, PA, 2022</h1>
-                        <!-- Year -->
-                        <h2></h2>
-                        <!-- Tags -->
-                        <div class="tags">
-                            <a href="/tags/">
-                                <h4 style="display: inline;">[Mapbox/Maplibre GL JS, Python, OpenStreetMap, Node.js]</h4>
-                            </a>
-                        </div>
-                        <!-- Thumbnail -->
-                        <img src="{ url_for('static', filename='images/None') }" alt="">
-                        <!-- Content -->
-                        <p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
-                        single building in Allegheny County. This project is made with Maplibre, an open-source fork of
-                        the
-                        popular Mapbox GL web mapping javascript library. The building data comes from OpenStreetMap's
-                        (OSM)
-                        API including OSM's own query language. The data is converted into a geoJSON using
-                        a
-                        python script.</p>
-                    </main>
-                    {% endblock %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1>Every building in Pittsburgh, PA, 2022</h1>
+    <!-- Year -->
+    <h2>2022-05-29</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">[Mapbox/Maplibre GL JS, Python, OpenStreetMap, Node.js]</h4>
+        </a>
+    </div>
+    <!-- Thumbnail -->
+    <img src="{ url_for('static', filename='images/None') }" alt="">
+    <!-- Content -->
+    <p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
+        single building in Allegheny County. This project is made with Maplibre, an open-source fork of
+        the
+        popular Mapbox GL web mapping javascript library. The building data comes from OpenStreetMap's
+        (OSM)
+        API including OSM's own query language. The data is converted into a geoJSON using
+        a
+        python script.</p>
+</main>
+{% endblock %}

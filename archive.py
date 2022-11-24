@@ -1,6 +1,7 @@
 from Post import Post
 from bs4 import BeautifulSoup
 import os
+from datetime import date
 
 
 def archive():
@@ -22,12 +23,17 @@ def archive():
             tags = all_tags.split(",")
             tags = [x.strip() for x in tags]
 
+            # clean date from Title
+
             archive_obj = {
                 "url": file[:-5],
                 "title": soup.h1.text,
                 "thumbnail": "static/" + soup.img["src"][31:-5],
                 "tags": tags,
+                "date": date.fromisoformat(soup.h2.text),
             }
+
             my_archive.append(archive_obj)
 
-    return my_archive
+    sorted_obj = sorted(my_archive, key=lambda archive: archive["date"])
+    return sorted_obj

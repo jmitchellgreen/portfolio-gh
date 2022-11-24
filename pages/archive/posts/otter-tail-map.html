@@ -1,22 +1,22 @@
 {% extends "base.html" %}
-                    {% block content %}
-                    <main>
-                        <!-- Title -->
-                        <h1>Otter Tail County, MN, 2019</h1>
-                        <!-- Year -->
-                        <h2></h2>
-                        <!-- Tags -->
-                        <div class="tags">
-                            <a href="/tags/">
-                                <h4 style="display: inline;">[ArcMap]</h4>
-                            </a>
-                        </div>
-                        <!-- Thumbnail -->
-                        <img src="{{ url_for('static', filename='images/green_geog365_otter_tail-1.jpg') }}" alt="">
-                        <!-- Content -->
-                        <p>
-                        Map of Otter Tail County, MN. This exercise in ArcMap's Mapblex Label engine for fine tuning
-                        map labeling's detail and design.
-                    </p>
-                    </main>
-                    {% endblock %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1>Otter Tail County, MN, 2019</h1>
+    <!-- Year -->
+    <h2>2019-04-01</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">[ArcMap]</h4>
+        </a>
+    </div>
+    <!-- Thumbnail -->
+    <img src="{{ url_for('static', filename='images/green_geog365_otter_tail-1.jpg') }}" alt="">
+    <!-- Content -->
+    <p>
+        Map of Otter Tail County, MN. This exercise in ArcMap's Mapblex Label engine for fine tuning
+        map labeling's detail and design.
+    </p>
+</main>
+{% endblock %}

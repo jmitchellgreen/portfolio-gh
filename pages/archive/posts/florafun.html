@@ -1,25 +1,25 @@
 {% extends "base.html" %}
-                    {% block content %}
-                    <main>
-                        <!-- Title -->
-                        <h1>Flora Fun, 2021</h1>
-                        <!-- Year -->
-                        <h2></h2>
-                        <!-- Tags -->
-                        <div class="tags">
-                            <a href="/tags/">
-                                <h4 style="display: inline;">[C#, ASP.NET]</h4>
-                            </a>
-                        </div>
-                        <!-- Thumbnail -->
-                        <img src="{ url_for('static', filename='images/None') }" alt="">
-                        <!-- Content -->
-                        <p>The above is an embeded website (original found here)
-                        built
-                        by myself and a friend. We web scrape Wikihow's plant section and display infromation on house
-                        plant
-                        care.
-                        
-</p>
-                    </main>
-                    {% endblock %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1>Flora Fun, 2021</h1>
+    <!-- Year -->
+    <h2>2021-11-14</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">[C#, ASP.NET]</h4>
+        </a>
+    </div>
+    <!-- Thumbnail -->
+    <img src="{ url_for('static', filename='images/None') }" alt="">
+    <!-- Content -->
+    <p>The above is an embeded website (original found here)
+        built
+        by myself and a friend. We web scrape Wikihow's plant section and display infromation on house
+        plant
+        care.
+
+    </p>
+</main>
+{% endblock %}

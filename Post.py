@@ -2,13 +2,8 @@
 #### github: jmitchellgreen
 
 
-from turtle import update
 from typing import List
 import datetime
-import inspect
-import os
-import sys
-import json
 
 
 class Post:
@@ -34,7 +29,7 @@ class Post:
         self.year = year
         self.custom_page = custom_page
 
-    def create_post(self):
+    def create_post(self) -> None:
         with open(f"./pages/archive/posts/{self.url}.html", "w") as post:
             post.write(
                 f"""{{% extends "base.html" %}}
@@ -57,3 +52,4 @@ class Post:
                     </main>
                     {{% endblock %}}"""
             )
+        return

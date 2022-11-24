@@ -1,24 +1,24 @@
 {% extends "base.html" %}
-                    {% block content %}
-                    <main>
-                        <!-- Title -->
-                        <h1>Custom QGIS Plugin, 2020</h1>
-                        <!-- Year -->
-                        <h2></h2>
-                        <!-- Tags -->
-                        <div class="tags">
-                            <a href="/tags/">
-                                <h4 style="display: inline;">[QGIS, Python]</h4>
-                            </a>
-                        </div>
-                        <!-- Thumbnail -->
-                        <img src="{{ url_for('static', filename='images/qgis.png') }}" alt="">
-                        <!-- Content -->
-                        <p>
-                        Source code found here
-                        on github, this senior year project investigates the feasibility of using sound as a medium for
-                        geospatial analysis. The tool, written in Python for a QGIS plugin seen in the image, produces a
-                        piano tone based on the color band of a satellite image.
-                    </p>
-                    </main>
-                    {% endblock %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1>Custom QGIS Plugin, 2020</h1>
+    <!-- Year -->
+    <h2>2020-06-01</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">[QGIS, Python]</h4>
+        </a>
+    </div>
+    <!-- Thumbnail -->
+    <img src="{{ url_for('static', filename='images/qgis.png') }}" alt="">
+    <!-- Content -->
+    <p>
+        Source code found here
+        on github, this senior year project investigates the feasibility of using sound as a medium for
+        geospatial analysis. The tool, written in Python for a QGIS plugin seen in the image, produces a
+        piano tone based on the color band of a satellite image.
+    </p>
+</main>
+{% endblock %}
