@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <h1>archive</h1>
-    <br>
+    <h1 style="font-size: 10vh">archive</h1>
+    <hr>
     <div class="grid-container">
         <div class="grid-item">
             {% for i in my_archive %}
-            <a style="line-height: 1.5" href="archive/{{ i.url }}">
-                <h4>{{ i.title }}</h4>
+            <a href="archive/{{ i.url }}">
+                <h2 style="margin-bottom: 5px;">{{ i.title }}</h2>
             </a>
-            <p>{{ i.date }}</p>
-            <!-- {% for tag in i.tags %}
-            <div class="tags">
-                <p>{{ tag }}</p>
+            <p style="margin-top: 5px; display: inline-block;">{{ i.date }}</p>
+            {% for tag in i.tags %}
+            <div style="display: inline-block;" class="tags">
+                <h4>{{ tag }}</h4>
             </div>
-            {% endfor %} -->
+            {% endfor %}
             {% endfor %}
         </div>
     </div>

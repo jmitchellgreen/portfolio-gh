@@ -38,11 +38,11 @@ a {
     height: 100vh;
 }
 
-li {
+li.sidebar {
     font-size: 4vh;
 }
 
-ul {
+ul.sidebar {
     list-style-type: none;
     position: absolute;
     bottom: 0;
@@ -66,7 +66,7 @@ img {
 }
 
 /* mobile screens */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
     main {
         padding-top: 10vh;
