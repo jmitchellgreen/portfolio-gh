@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1>{self.title}</h1>
+    <!-- Year -->
+    <h2></h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">{self.tags}</h4>
+        </a>
+    </div>
+    <!-- Thumbnail -->
+    <img src="{{{{ url_for('static', filename='images/{self.thumbnail}') }}}}" alt="">
+    <!-- Content -->
+    <p>{self.content}</p>
+</main>
+{{% endblock %}}

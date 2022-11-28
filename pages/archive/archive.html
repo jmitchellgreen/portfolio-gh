@@ -6,9 +6,15 @@
     <div class="grid-container">
         <div class="grid-item">
             {% for i in my_archive %}
-            <a href="archive/{{ i.url }}">
-                <h4 style="line-height: 1.5;">{{ i.title }}</h4>
+            <a style="line-height: 1.5" href="archive/{{ i.url }}">
+                <h4>{{ i.title }}</h4>
             </a>
+            <p>{{ i.date }}</p>
+            <!-- {% for tag in i.tags %}
+            <div class="tags">
+                <p>{{ tag }}</p>
+            </div>
+            {% endfor %} -->
             {% endfor %}
         </div>
     </div>
