@@ -53,11 +53,11 @@ map.on('load', function () {
         // GeoJSON Data source used in vector tiles, documented at
         // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
         'type': 'geojson',
-        'data': './osm.geojson'
+        'data': "../../../static/javascript/pgh-buildings/osm.geojson"
     });
     map.addSource('sm_buildings', {
         'type': 'geojson',
-        'data': './sm_buildings.geojson'
+        'data': "../../../static/javascript/pgh-buildings/sm_buildings.geojson"
     });
     map.addLayer({
         'id': 'my-buildings',
