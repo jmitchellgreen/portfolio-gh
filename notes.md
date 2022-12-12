@@ -10,3 +10,5 @@
   - [ ] Fix nav bar in mobile view
 - [ ] Figure out server/linux pc setup
 - [ ] Change date `<h3>` tag to something else
+- [ ] Fix "green.dev" sidebar tiny pixel prefix
+- [ ] Fix horizonal scroll on mobile

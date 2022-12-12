@@ -61,15 +61,22 @@ main {
     padding: 5px;
 }
 
+/* change me? */
 img {
     max-width: 550px;
+}
+
+hr {
+    border: none;
+    height: 10px;
+    background-color: black;
 }
 
 /* mobile screens */
 @media screen and (max-width: 700px) {
 
     main {
-        padding-top: 10vh;
+        padding-top: 15vh;
         max-width: 90vw;
         margin: 0;
     }
@@ -129,7 +136,7 @@ img {
 }
 
 p {
-    margin-top: 45px;
+    /* margin-top: 45px; */
     margin-bottom: 45px;
 }
 
