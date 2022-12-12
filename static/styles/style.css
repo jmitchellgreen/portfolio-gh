@@ -46,7 +46,7 @@ ul.sidebar {
     list-style-type: none;
     position: absolute;
     bottom: 0;
-    /* margin: 1vh; */
+    padding-left: 10px;
     text-align: end;
 }
 
@@ -54,15 +54,15 @@ ul.sidebar {
 /* all other pages */
 main {
     /* padding-left: 20vw; */
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 550px;
+    margin-left: 30vw;
     /* display: flex; */
     justify-content: center;
     padding: 5px;
 }
 
 img {
-    max-width: 500px;
+    max-width: 550px;
 }
 
 /* mobile screens */
@@ -71,6 +71,7 @@ img {
     main {
         padding-top: 10vh;
         max-width: 90vw;
+        margin: 0;
     }
 
     #name {
