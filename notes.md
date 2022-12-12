@@ -9,3 +9,4 @@
   - [ ] Format spacing in article between tags and content
   - [ ] Fix nav bar in mobile view
 - [ ] Figure out server/linux pc setup
+- [ ] Change date `<h3>` tag to something else

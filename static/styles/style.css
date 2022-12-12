@@ -16,7 +16,7 @@ a:hover {
 a {
     color: inherit;
     /* text-decoration-style: dashed; */
-    text-decoration-thickness: 0.4rem;
+    text-decoration-thickness: 0.3rem;
 }
 
 #home {
@@ -113,4 +113,32 @@ img {
         max-width: 90vw;
     }
 
+}
+
+/* ///////////////////////// */
+
+.tags h4 {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 0.2em;
+    margin: 0;
+}
+
+.tags a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+code {
+    background-color: #639a88ff;
+    padding: 1rem;
+    display: inline-block;
+}
+
+code::selection {
+    background-color: white;
 }

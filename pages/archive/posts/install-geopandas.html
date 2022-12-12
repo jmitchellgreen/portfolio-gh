@@ -2,7 +2,7 @@
 {% block content %}
 <main>
     <!-- Title -->
-    <h1>How to Install Geopandas the Easy Way??? Changme</h1>
+    <h1>How to Install Geopandas - the Easy Way</h1>
     <!-- Year -->
     <h2>2022-12-12</h2>
     <!-- Tags -->
@@ -14,23 +14,47 @@
 
     <!-- Content -->
     <article>
+        <br> <!-- temp fix TODO: fix spacing-->
         <img src="../../../static/images/install-geopandas/baby-panda.webp"
-            alt="Photo of a baby pandas holding a plastic ball">
+            alt="Photo of a baby pandas holding a plastic ball" style="border: 2px solid;">
         <div class="credits">
             <a href='https://www.npr.org/sections/thetwo-way/2013/01/10/169057467/agreed-baby-pandas-are-cute-but-why'>Source:
                 NPR</a>
         </div>
+        <br>
         <!-- Keep the first paragraph????????? -->
+        <h3>Introduction</h3>
         <p>If you found this article, that means you most likely
             encountered issues installing the python library
             <a href="https://geopandas.org/en/stable/">geopandas.</a> If not, no worries! The following
             method is the smoothest entry to begin coding with one of the popular geospatial python libraries.
         </p>
-        <p>The reason why I was drawn to writing this article is twofold: for my love of geopandas and my hatred of
-            frustrating installs. </p>
+        <p>The inspiration to write this article was twofold: for my love of geopandas and my hatred of
+            frustrating installs.</p>
+        <br>
+        <h3>The short</h3>
+        <div id="the-short" style="width: 50%; margin: 0 auto;">
+            <span><i>Anaconda Prompt (miniconda3)</i></span>
+            <code style="width: 65%;">
+                conda install geopandas
+            </code>
+            <span id="copier" style="font-size: 32px;" class="material-symbols-outlined">content_copy</span>
+            <span id="copyText" style="visibility: hidden; display: inline; position: absolute;">Copied!</span>
+            <script>
+                const copier = document.getElementById("copier")
+                const copyText = document.getElementById("copyText")
+                copier.addEventListener("click", event => {
+                    copyText.style.visibility = "visible";
+                    navigator.clipboard.writeText("conda install geopandas");
+                })
+            </script>
+        </div>
+        <br>
+        <h3>History</h3>
         <p>The python community, specifically the scientific computing
-            community has notoriously
-            had issues with package installation, dependicy errors, and library management. So much so that </p>
+            community notoriously
+            struggled issues with package installation, dependicy errors, and library management. So much so that
+        </p>
     </article>
 </main>
 {% endblock %}
