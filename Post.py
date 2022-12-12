@@ -37,16 +37,14 @@ class Post:
                     <main>
                         <!-- Title -->
                         <h1>{self.title}</h1>
-                        <!-- Year -->
+                        <!-- Date -->
                         <h2></h2>
-                        <!-- Tags -->
+                        <!-- Tag(s) -->
                         <div class="tags">
                             <a href="/tags/">
                                 <h4 style="display: inline;">{self.tags}</h4>
                             </a>
                         </div>
-                        <!-- Thumbnail -->
-                        <img src="{{{{ url_for('static', filename='images/{self.thumbnail}') }}}}" alt="">
                         <!-- Content -->
                         <p>{self.content}</p>
                     </main>
