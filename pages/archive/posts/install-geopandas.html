@@ -2,8 +2,9 @@
 {% block content %}
 <main>
     <!-- Title -->
-    <h1>How to Install Geopandas - The easy way, the way you probably tried first, and why the hell it got like this
+    <h1>How to Install Geopandas
     </h1>
+    <h2>The easy way, the way you probably tried first, and why the hell it got like this</h2>
     <h3><a href="/about"><span class="material-symbols-outlined">person</span>Mitchell Green</a></h3>
     <h4>2022-12-12</h4>
     <!-- Tags -->
@@ -24,11 +25,9 @@
         </div>
         <br>
         <h3>The Short</h3>
-        <div id="the-short" style="width: 50%; margin: 0 auto;">
+        <div id="the-short" style="width: 75%; margin: 0 auto;">
             <span><i>Anaconda Prompt (miniconda3)</i></span>
-            <code style="width: 65%;">
-                conda install geopandas
-            </code>
+            <code style="width: 70%;">conda install -c conda-forge geopandas</code>
             <span id="copier" style="font-size: 32px; cursor: pointer;"
                 class="material-symbols-outlined">content_copy</span>
             <span id="copyText" style="visibility: hidden; display: inline; position: absolute;">Copied!</span>
@@ -37,12 +36,11 @@
                 const copyText = document.getElementById("copyText")
                 copier.addEventListener("click", event => {
                     copyText.style.visibility = "visible";
-                    navigator.clipboard.writeText("conda install geopandas");
+                    navigator.clipboard.writeText("conda install -c conda-forge geopandas");
                 })
             </script>
         </div>
         <br>
-        <!-- Keep the first paragraph????????? -->
         <h3>Introduction</h3>
         The inspiration for this article is twofold: my love of powerful GIS libraries and my hatred of
         frustrating installs. <a href="https://geopandas.org/en/stable/">Geopandas</a> intersects both.
@@ -70,7 +68,7 @@
         <h3>The Problem</h3>
         <img src="../../../static/images/install-geopandas/geopandas-google-results.PNG"
             alt="screenshot of a google search result for 'geopandas install'">
-        <p>From the screenshot above, four out of the nine google search suggestions alude to the core of the
+        <p>From the screenshot above, four out of the nine google search suggestions allude to the core of the
             issue: simply installing! "But", you say, "I normally use pip, what's so hard about downloading a python
             library?" Enter <em>dependencies</em>. You know how geopandas stands on the shoulders of giants? Well, you
             gotta install those giants too.
@@ -112,16 +110,18 @@
             be less than desirable.
         </p>
         <p>So, what do we do from here? Accept our fate, attempt to download the right dependencies from the <a
-                href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">godforsaken depths of unofficial Windows Binaries for
-                Python</a>, and wallow in the endless pit of unhelpful yet still snarky stackoverflow responses? There
-            must be a better way, right?</p>
-        <h3>Creeps, Bloats, and Anacondas</h3>
+                href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">godforsaken depths of the unofficial Windows binaries
+                for Python archive</a>, and wallow in the endless pit of unhelpful yet still snarky stackoverflow
+            responses? There must be a better way, right?</p>
+        <h3>A Better Way (?)</h3>
         <p>
             The python community, specifically the scientific computing
             community notoriously struggled issues with package installation, dependicy errors, and library
             management.<sup><a href="#r4">[4]</a></sup>
-            So much so that they created their own Python distribution: Anaconda.
+            So much so that they created their own package distribution: Anaconda.
         </p>
+
+        <h3>Creeps, Bloats, and Anaconda(s)</h3>
         <h3>Conclusion</h3>
         <h3>References</h3>
         <div class="references">
