@@ -43,3 +43,7 @@ def archive():
         my_archive, key=lambda archive: archive["iso_date"], reverse=True
     )
     return sorted_obj
+
+
+def change_html():
+    return

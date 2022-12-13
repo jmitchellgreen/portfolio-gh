@@ -43,32 +43,60 @@
         <br>
         <!-- Keep the first paragraph????????? -->
         <h3>Introduction</h3>
-        <p>The inspiration for this article is twofold: for my love of powerful GIS libraries and my hatred of
-            frustrating installs. <a href="https://geopandas.org/en/stable/">Geopandas</a> intersects<sup><a
-                    href="#r1">[1]</a></sup>
-            both.
+        The inspiration for this article is twofold: for my love of powerful GIS libraries and my hatred of
+        frustrating installs. <a href="https://geopandas.org/en/stable/">Geopandas</a> intersects<sup><a
+                href="#r1">[1]</a></sup> both.
         </p>
-        <p>If you found this article, that means you most likely
-            encountered issues installing the geopandas python library. If not, no worries! If you do not understand the
-            above snippet in green, have not fear. The method below
-            is (hopefully) the smoothest entry to begin coding with one of the popular geospatial python libraries to
-            date.
+        If you found this article, that means you most likely
+        encountered issues installing the geopandas python library. If not, no worries! If you do not understand the
+        above snippet in green, have not fear. The method below
+        is (hopefully) the smoothest entry to begin coding with one of the popular geospatial python libraries to
+        date.
         </p>
         <h3>History</h3>
-        <p>While I won't dive into the entire backstory of Open-source GIS, (though that may
-            be an intriguing article for another time...) I want to provide some context into why we must take this
-            seemingly-roundabout-approach to simply install a python library.
+        While I won't dive into the entire backstory of Open-source GIS, (though that may
+        be an intriguing article for another time...) I want to provide some context into why we must take this
+        seemingly-roundabout-approach to simply install a python library.
         </p>
-        <p>The python community, specifically the scientific computing
-            community notoriously
-            struggled issues with package installation, dependicy errors, and library management. So much so that they
-            created their own Python distribution: Anaconda.
+        <p>Geopandas dependencies.<sup><a href="#r2">[2]</a></sup> </p>
+        <blockquote>
+            <li>
+                <a class="reference external" href="http://www.numpy.org">numpy</a>
+            </li>
+            <li>
+                <a class="reference external" href="http://pandas.pydata.org">pandas</a> (version 1.0 or later)
+            </li>
+            <li>
+                <a class="reference external" href="https://shapely.readthedocs.io">shapely</a> (interface to <a
+                    class="reference external" href="https://geos.osgeo.org">GEOS</a>; version 1.7 or later)
+            </li>
+            <li>
+                <a class="reference external" href="https://fiona.readthedocs.io">fiona</a> (interface to <a
+                    class="reference external" href="https://www.gdal.org/">GDAL</a>; version 1.8 or later)
+            </li>
+            <li>
+                <a class="reference external" href="https://github.com/pyproj4/pyproj">pyproj</a> (interface to <a
+                    class="reference external" href="https://proj.org/">PROJ</a>; version 2.6.1 or later)
+            </li>
+            <li>
+                <a class="reference external" href="https://packaging.pypa.io/en/latest/">packaging</a>
+            </li>
+        </blockquote>
+        <br>
+        <p>
+            The python community, specifically the scientific computing
+            community notoriously struggled issues with package installation, dependicy errors, and library management.
+            So much so that they created their own Python distribution: Anaconda.
         </p>
         <h3>References</h3>
         <div class="references">
             <ol>
                 <li id="r1"><a
                         href="http://wiki.gis.com/wiki/index.php/Intersect">http://wiki.gis.com/wiki/index.php/Intersect</a>
+                </li>
+                <li id="r2">
+                    <a href="https://geopandas.org/en/stable/getting_started/install.html#dependencies">
+                        https://geopandas.org/en/stable/getting_started/install.html#dependencies</a>
                 </li>
             </ol>
         </div>
