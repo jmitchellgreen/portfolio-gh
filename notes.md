@@ -8,6 +8,8 @@
 - [X] Begin to write geopandas installation article
   - [ ] Format spacing in article between tags and content
   - [ ] Fix nav bar in mobile view
+  - [ ] Re-order References list
+  - [ ] Fix overall formatting in mobile
 - [ ] Figure out server/linux pc setup
 - [ ] Change date `<h3>` tag to something else
 - [ ] Fix "green.dev" sidebar tiny pixel prefix
