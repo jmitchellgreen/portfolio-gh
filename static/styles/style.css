@@ -153,3 +153,7 @@ code {
 code::selection {
     background-color: white;
 }
+
+span.material-symbols-outlined {
+    vertical-align: middle;
+}
