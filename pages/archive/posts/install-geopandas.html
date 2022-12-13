@@ -2,9 +2,9 @@
 {% block content %}
 <main>
     <!-- Title -->
-    <h1>How the Install Geopandas - The easy way, the way you probably tried first, and why the hell it got like this
+    <h1>How to Install Geopandas - The easy way, the way you probably tried first, and why the hell it got like this
     </h1>
-    <h3><span class="material-symbols-outlined">person</span>Mitchell Green</h3>
+    <h3><a href="/about"><span class="material-symbols-outlined">person</span>Mitchell Green</a></h3>
     <h4>2022-12-12</h4>
     <!-- Tags -->
     <div class="tags">
@@ -103,19 +103,26 @@
                 </li>
             </ul>
         </blockquote>
+        <br>
         <p>
-            The biggest hurdle for installation include those odd little interfaces. Those initial python packages
+            The biggest hurdle for installation include those odd little interfaces. The initial python packages
             (shapely, fiona, pyproj) are ports of C/C++ libraries. And some of those C/C++ libraries are ports of Java
-            libraries themselves! The tricky part is that geopandas requires the correct version of the C/C++ ports. And
-            installing C libraries can be, let's just say less than desirable.
+            libraries! The tricky part is that geopandas requires a combination of the C/C++ libraries <em>and</em>
+            their correct version. If you have ever tried downloading and managing C/C++ libraries, the experience can
+            be less than desirable.
         </p>
+        <p>So, what do we do from here? Accept our fate, attempt to download the right dependencies from the <a
+                href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">godforsaken depths of unofficial Windows Binaries for
+                Python</a> and wallow in the endless pit of unhelpful yet still snarky stackoverflow responses? There
+            must be a better way? Right?</p>
+        <h3>Creeps, Bloats, and Anacondas</h3>
         <p>
             The python community, specifically the scientific computing
             community notoriously struggled issues with package installation, dependicy errors, and library
-            management.
+            management.<sup><a href="#r4">[4]</a></sup>
             So much so that they created their own Python distribution: Anaconda.
         </p>
-        <!--  -->
+        <h3>Conclusion</h3>
         <h3>References</h3>
         <div class="references">
             <ol style="display: flex; flex-wrap: wrap;">
@@ -129,6 +136,10 @@
                 <li id="r3">
                     <a href="https: //www.esri.com/en-us/what-is-gis/history-of-gis">
                         https://www.esri.com/en-us/what-is-gis/history-of-gis</a>
+                </li>
+                <li id="r4">
+                    <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview">
+                        https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview</a>
                 </li>
             </ol>
         </div>
