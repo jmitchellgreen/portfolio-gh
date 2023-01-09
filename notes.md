@@ -14,3 +14,4 @@
 - [ ] Change date `<h3>` tag to something else
 - [ ] Fix "green.dev" sidebar tiny pixel prefix
 - [ ] Fix horizonal scroll on mobile
+- [ ] Make tags work

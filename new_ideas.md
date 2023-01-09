@@ -7,3 +7,7 @@ New Idea List
 - [ ] History of the shapefile ?
 - [ ] Overpass API
   - [ ] https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Introduction
+- [ ] Hyperpop => Folk music
+- [ ] Souncloud/alt streaming
+  - [ ] history of music consumption
+- [ ] History of the shoe

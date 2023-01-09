@@ -16,7 +16,7 @@ a:hover {
 a {
     color: inherit;
     /* text-decoration-style: dashed; */
-    text-decoration-thickness: 0.3rem;
+    text-decoration-thickness: 0.25rem;
 }
 
 #home {
