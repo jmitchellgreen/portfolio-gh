@@ -57,16 +57,29 @@ def archive():
             soup = BeautifulSoup(f, features="html.parser")
 
             url = file[:-5]
+
             title = soup.h1.text
-            tags = [tag.text for tag in soup.find_all(class_="tags")]
-            iso_date = soup.find(class_="date")
+            # remove year in title
+            if ", 20" in title:
+                title = title[:-6]
+
+            # format tags new and old
+            tags = [tag.text.strip('\n').strip('[').strip(']').split(',') for tag in soup.find_all(class_="tags")]
+            tags = tags[0]
+            if "\n" in tags[0]:
+                tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(',')
+                tags = tags[0]
+
+            iso_date = date.fromisoformat(soup.find(class_="date").text)
+            if iso_date is None: continue
+        
 
             archive_obj = {
                 "url": url,
                 "title": title,
                 "tags": tags,
                 "iso_date": iso_date,
-                "date": iso_date.strftime("%d %b %y"),
+                "date": iso_date.strftime("%Y %b %d"),
             }
 
             my_archive.append(archive_obj)
