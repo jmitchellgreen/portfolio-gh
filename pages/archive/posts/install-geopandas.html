@@ -2,16 +2,15 @@
 {% block content %}
 <main>
     <!-- Title -->
-    <h1>How to Install Geopandas
-    </h1>
-    <h2>The easy way, the way you probably tried first, and why the hell it got like this</h2>
+    <h1>How to Install Geopandas</h1>
+    <h2>The easy way, the way you probably tried first, and how the hell we got to this point.</h2>
     <h3><a href="/about"><span class="material-symbols-outlined">person</span>Mitchell Green</a></h3>
-    <h4>2022-12-12</h4>
+    <h4 class="date">2022-12-12</h4>
     <!-- Tags -->
     <div class="tags">
         <h4 style="display: inline;">geopandas</h4>
         <h4 style="display: inline;">python</h4>
-        <!-- <h4 style="display: inline;">miniconda</h4> Keep me??? -->
+        <h4 style="display: inline;">blog</h4>
     </div>
 
     <!-- Content -->
@@ -21,7 +20,7 @@
             alt="Photo of a baby pandas holding a plastic ball" style="border: 2px solid;">
         <div class="credits">
             <a href='https://www.npr.org/sections/thetwo-way/2013/01/10/169057467/agreed-baby-pandas-are-cute-but-why'>Source:
-                NPR</a>
+                Ken Bohn/San Diego Zoo/AP</a>
         </div>
         <br>
         <h3>The Short</h3>
@@ -42,12 +41,12 @@
         </div>
         <br>
         <h3>Introduction</h3>
-        The inspiration for this article is twofold: my love of powerful GIS libraries and my hatred of
-        frustrating installs. <a href="https://geopandas.org/en/stable/">Geopandas</a> intersects both.
+        <p>The inspiration for this article is twofold: my love of powerful GIS libraries and my hatred of
+            frustrating installs. <a href="https://geopandas.org/en/stable/">Geopandas</a> intersects both.
         </p>
         <p>If you found this article, that means you most likely
             encountered issues installing the geopandas python library. If not, no worries! If you do not
-            understand the above snippet in green, have not fear. The method described below is the smoothest entry (in
+            understand the above snippet in green, have no fear. The method described below is the smoothest entry (in
             my experience) to begin coding with one of the popular geospatial python libraries to date.
         </p>
         <h3>History</h3>
@@ -58,7 +57,7 @@
         <p>Geopandas can arguably be described as the culmination of technology from the past two decades of
             advancement
             in GIS, python, and software development (1963 if you would like to get technical<sup><a
-                    href="#r3">[3]</a></sup>). I can confidently support this argument due to the fact that
+                    href="#r3">[3]</a></sup>). I'll support this argument due to the fact that
             geopandas
             stands on the shoulders of giants; this python library is built on top of established and powerful
             geospatial code. Although this methodology is practical in order to avoid re-inventing the wheel,
@@ -70,14 +69,10 @@
             alt="screenshot of a google search result for 'geopandas install'">
         <p>From the screenshot above, four out of the nine google search suggestions allude to the core of the
             issue: simply installing! "But", you say, "I normally use pip, what's so hard about downloading a python
-            library?" Enter <em>dependencies</em>. You know how geopandas stands on the shoulders of giants? Well, you
-            gotta install those giants too.
+            library?" Enter <em>dependencies</em>. You know how geopandas stands on the shoulders of giants? Well in
+            this case, you gotta install those giants too.
         </p>
-        <p>
-            If you were like me and chomping at the bit to just get started with geopandas <em>and</em> wanted to use
-            pip despite the ominous warnings.
-        </p>
-        <div>List of dependencies for geopandas<sup><a href="#r2">[2]</a></sup> </div>
+        <div>A list of dependencies for geopandas according its official website<sup><a href="#r2">[2]</a></sup></div>
         <blockquote>
             <ul>
                 <li>
@@ -105,32 +100,38 @@
                 </li>
             </ul>
         </blockquote>
-        <br>
-        <p>
-            The biggest hurdle for installation include those odd little interfaces. The initial python packages
-            (shapely, fiona, pyproj) are ports of C/C++ libraries. Fun fact - some of those C/C++ libraries are ports of
-            Java libraries! The tricky part is that geopandas requires a combination of the C/C++ libraries <em>and</em>
-            their correct version. If you have ever tried downloading and managing C/C++ libraries, the experience can
-            be less than desirable.
+        <br />
+        <p>If you were like me and chomping at the bit to just get started with geopandas <em>and</em> tried to install
+            via pip (like the majority of python packages), I'm guessing you may have ran into issues.
+        </p>The biggest hurdle for installation include those odd little interfaces. The initial python packages
+        (shapely, fiona, pyproj) are ports of C/C++ libraries. Fun fact - some of those C/C++ libraries are ports of
+        Java libraries! The tricky part is that geopandas requires a combination of the C/C++ libraries <em>and</em>
+        their correct version. If you have ever tried downloading and managing C/C++ libraries, the experience can
+        be less than desirable.
         </p>
+        <p>In fact, I'm sure at this point you may have been annoyed, even frustrated. "I just want to make a damn
+            map!", you proclaim. "What is this C binary package and why must I download this?"</p>
+        <p>
         <p>So, what do we do from here? Accept our fate, attempt to download the right dependencies from the <a
                 href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">godforsaken depths of the unofficial Windows binaries
-                for Python archive</a>, and wallow in the endless pit of unhelpful yet still snarky stackoverflow
+                for Python archive</a>, and wallow in the endless pit of unhelpful yet snarky stackoverflow
             responses? There must be a better way, right?</p>
         <h3>A Better Way (?)</h3>
-        <p>
-            The python community, specifically the scientific computing
+        <p>The python community, specifically the scientific computing
             community notoriously struggled issues with package installation, dependicy errors, and library
-            management.<sup><a href="#r4">[4]</a></sup>
-            So much so that they created their own package distribution: Anaconda.
+            management.<sup><a href="#r4">[4]</a></sup> So much so that they created their own package distribution:
+            Anaconda.
         </p>
         <!-- GET TO THE POINT?? -->
-        <p>
-            Anaconda, self-described as <a href="https://www.anaconda.com/products/distribution">"The world's most
-                popular open-source Python distribution platform"</a> is a further step into the story of geopandas.
+        <p>Anaconda, self-described as <a href="https://www.anaconda.com/products/distribution">"The world's most
+                popular open-source Python distribution platform"</a> is a step closer into accessing geopandas.
+        </p>
+        <p>"A step?", you say, "This sounds like a solution. No, <em>the</em> solution!". "We just need to get this
+            separate distribution platform, and I'll be wrangling geospatial data in no time!" you declare full of
+            relief and joy. Not so fast... there's more to this story and everything's not pretty.
         </p>
         <h3>Creeps and Bloats and Anacondas, oh my!</h3>
-        <p>In my op</p>
+        <p>To be continued...</p>
         <h3>Conclusion</h3>
         <h3>References</h3>
         <div class="references">

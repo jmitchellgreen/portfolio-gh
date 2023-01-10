@@ -10,8 +10,9 @@
   - [ ] Fix nav bar in mobile view
   - [ ] Re-order References list
   - [ ] Fix overall formatting in mobile
-- [ ] Figure out server/linux pc setup
+- [X] Figure out server/linux pc setup
 - [ ] Change date `<h3>` tag to something else
 - [ ] Fix "green.dev" sidebar tiny pixel prefix
 - [ ] Fix horizonal scroll on mobile
 - [ ] Make tags work
+- [ ] Update write date

@@ -1,10 +1,9 @@
-from Post import Post
 from bs4 import BeautifulSoup
 import os
 from datetime import date
 
-
-def archive():
+# depreciated func
+def archive2():
     PATH = "./pages/archive/posts"
 
     files = os.listdir(PATH)
@@ -35,6 +34,39 @@ def archive():
                 "tags": tags,
                 "iso_date": date.fromisoformat(soup.h2.text),
                 "date": date.fromisoformat(soup.h2.text).strftime("%d %b %y"),
+            }
+
+            my_archive.append(archive_obj)
+
+    sorted_obj = sorted(
+        my_archive, key=lambda archive: archive["iso_date"], reverse=True
+    )
+    return sorted_obj
+
+
+def archive():
+    PATH = "./pages/archive/posts"
+
+    files = os.listdir(PATH)
+
+    my_archive = []
+    for file in files:
+        with open(f"./pages/archive/posts/{file}") as f:
+
+            # soup for each .html
+            soup = BeautifulSoup(f, features="html.parser")
+
+            url = file[:-5]
+            title = soup.h1.text
+            tags = [tag.text for tag in soup.find_all(class_="tags")]
+            iso_date = soup.find(class_="date")
+
+            archive_obj = {
+                "url": url,
+                "title": title,
+                "tags": tags,
+                "iso_date": iso_date,
+                "date": iso_date.strftime("%d %b %y"),
             }
 
             my_archive.append(archive_obj)
