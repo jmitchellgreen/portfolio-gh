@@ -24,18 +24,22 @@
             const posts = Array.from(document.getElementsByClassName('post'))
             const tags = Array.from(document.getElementsByClassName('tag'))
 
-            //const post_tags = posts.map(x => x.querySelectorAll('.tags'))
-            //console.log(post_tags)
+            let flag = false
 
             for (let i = 0; i < tags.length; i++) {
                 tags[i].onclick = () => {
-                    // console.log(tags[i].parentElement.parentElement.firstElementChild.firstElementChild.innerHTML)
-                    console.log(tags[i].innerHTML)
+                    flag = !flag
+                    console.log("clicked tag: " + tags[i].innerHTML)
+
                     posts.find(node => {
-                        // console.log(node.querySelector('.tag'))
-                        // console.log(tags[i])
-                        if (node.querySelector('.tag').isEqualNode(tags[i])) {
-                            console.log(node)
+                        if (!node.querySelector('.tag').isEqualNode(tags[i]) && flag) {
+                            node.style["display"] = 'none'
+                            console.log('items to "none"')
+                        }
+
+                        if (!node.querySelector('.tag').isEqualNode(tags[i]) && !flag) {
+                            node.style["display"] = ''
+                            console.log('display this')
                         }
                     })
                 }
