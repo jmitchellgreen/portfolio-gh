@@ -78,4 +78,26 @@ def archive():
 
 
 def change_html():
-    return
+    PATH = "./pages/archive/posts"
+
+    files = os.listdir(PATH)
+
+    my_archive = []
+    for file in files:
+        if file == "install-geopandas.html":
+            continue
+        with open(f"./pages/archive/posts/{file}", "r") as f:
+
+            soup = BeautifulSoup(f, features="html.parser")
+
+            if soup.h2:
+                soup.h2["class"] = "date"
+            if soup.h1:
+                soup.h1["class"] = "title"
+
+        with open(f"./pages/archive/posts/{file}", "w") as f:
+            f.write(str(soup))
+
+
+if __name__ == "__main__":
+    change_html()

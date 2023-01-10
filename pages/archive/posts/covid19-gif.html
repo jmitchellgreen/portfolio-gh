@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <!-- Title -->
-    <h1>COVID-19 in the United States, 2022</h1>
-    <!-- Year -->
-    <h2>2022-05-01</h2>
-    <!-- Tags -->
-    <div class="tags">
-        <a href="/tags/">
-            <h4 style="display: inline;">[D3.js]</h4>
-        </a>
-    </div>
-    <!-- Thumbnail -->
-    <img src="{{ url_for('static', filename='images/recording.gif') }}" alt="">
-    <!-- Content -->
-    <p>This sobering chart visualizes the 1 million deaths and the 7 day rolling average
+<!-- Title -->
+<h1>COVID-19 in the United States, 2022</h1>
+<!-- Year -->
+<h2 class="date">2022-05-01</h2>
+<!-- Tags -->
+<div class="tags">
+<a href="/tags/">
+<h4 style="display: inline;">[D3.js]</h4>
+</a>
+</div>
+<!-- Thumbnail -->
+<img alt="" src="{{ url_for('static', filename='images/recording.gif') }}"/>
+<!-- Content -->
+<p>This sobering chart visualizes the 1 million deaths and the 7 day rolling average
         cases (as of May 2022). The left axis and red line show the 7 day average of cases in the United
         States, while the right axis and blue line display total deaths. This GIF was made with d3.js.
         Data

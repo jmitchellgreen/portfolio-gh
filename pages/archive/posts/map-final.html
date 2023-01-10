@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <!-- Title -->
-    <h1>US Power Plants, 2020</h1>
-    <!-- Year -->
-    <h2>2020-04-01</h2>
-    <!-- Tags -->
-    <div class="tags">
-        <a href="/tags/">
-            <h4 style="display: inline;">[ArcPro]</h4>
-        </a>
-    </div>
-    <!-- Thumbnail -->
-    <img src="{{ url_for('static', filename='images/power_____plants.jpg') }}" alt="">
-    <!-- Content -->
-    <p>
+<!-- Title -->
+<h1>US Power Plants, 2020</h1>
+<!-- Year -->
+<h2 class="date">2020-04-01</h2>
+<!-- Tags -->
+<div class="tags">
+<a href="/tags/">
+<h4 style="display: inline;">[ArcPro]</h4>
+</a>
+</div>
+<!-- Thumbnail -->
+<img alt="" src="{{ url_for('static', filename='images/power_____plants.jpg') }}"/>
+<!-- Content -->
+<p>
         This colorful map illustrates the spread of power plants in the United States from 2018.
     </p>
 </main>

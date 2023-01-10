@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <!-- Title -->
-    <h1>Mountain Top Removal, WV, 2018</h1>
-    <!-- Year -->
-    <h2>2018-09-01</h2>
-    <!-- Tags -->
-    <div class="tags">
-        <a href="/tags/">
-            <h4 style="display: inline;">[PCI Geomatica]</h4>
-        </a>
-    </div>
-    <!-- Thumbnail -->
-    <img src="{{ url_for('static', filename='images/mountain top removal.png') }}" alt="">
-    <!-- Content -->
-    <p>Raster analysis of satellite imagery for mountain top removal in West Virginia. The pink areas
+<!-- Title -->
+<h1>Mountain Top Removal, WV, 2018</h1>
+<!-- Year -->
+<h2 class="date">2018-09-01</h2>
+<!-- Tags -->
+<div class="tags">
+<a href="/tags/">
+<h4 style="display: inline;">[PCI Geomatica]</h4>
+</a>
+</div>
+<!-- Thumbnail -->
+<img alt="" src="{{ url_for('static', filename='images/mountain top removal.png') }}"/>
+<!-- Content -->
+<p>Raster analysis of satellite imagery for mountain top removal in West Virginia. The pink areas
         describes high levels of earth removal.</p>
 </main>
 {% endblock %}

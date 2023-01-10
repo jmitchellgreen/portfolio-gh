@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <!-- Title -->
-    <h1>Fast Find OpenStreetMap</h1>
-    <!-- Year -->
-    <h2>2022-07-01</h2>
-    <!-- Tags -->
-    <div class="tags">
-        <a href="/tags/">
-            <h4 style="display: inline;">[Python]</h4>
-        </a>
-    </div>
-    <!-- Thumbnail -->
-    <img src="{{ url_for('static', filename='images/fastfindosm.PNG') }}" alt="">
-    <!-- Content -->
-    <p>Fast find OSM is a Python command line interface for quickly searching and
+<!-- Title -->
+<h1>Fast Find OpenStreetMap</h1>
+<!-- Year -->
+<h2 class="date">2022-07-01</h2>
+<!-- Tags -->
+<div class="tags">
+<a href="/tags/">
+<h4 style="display: inline;">[Python]</h4>
+</a>
+</div>
+<!-- Thumbnail -->
+<img alt="" src="{{ url_for('static', filename='images/fastfindosm.PNG') }}"/>
+<!-- Content -->
+<p>Fast find OSM is a Python command line interface for quickly searching and
         downloading geojson of vector features. For instance, to run type:
         python -m fastfindosm -s "Paris" paris_texas.geojson
         to download the boundary for Paris, Texas, US.

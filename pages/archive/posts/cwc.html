@@ -1,29 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-    <!-- Title -->
-    <h1>Collegiate Wind Competition</h1>
-    <!-- Year -->
-    <h2>2020-06-15</h2>
-    <!-- Tags -->
-    <div class="tags">
-        <a href="/tags/ArcPro">
-            <h4 style="display: inline;">ArcPro</h4>
-        </a>
-        <a href="/tags/OpenWind">
-            <h4 style="display: inline;">Openwind</h4>
-        </a>
-    </div>
-    <!-- Thumbnail -->
-    <img src="{{ url_for('static', filename='images/cwc-main.jpg') }}"
-        alt=" Map of hypothetical wind turbine farm in Colorado">
-    <!-- Content -->
-    <p>
+<!-- Title -->
+<h1>Collegiate Wind Competition</h1>
+<!-- Year -->
+<h2 class="date">2020-06-15</h2>
+<!-- Tags -->
+<div class="tags">
+<a href="/tags/ArcPro">
+<h4 style="display: inline;">ArcPro</h4>
+</a>
+<a href="/tags/OpenWind">
+<h4 style="display: inline;">Openwind</h4>
+</a>
+</div>
+<!-- Thumbnail -->
+<img alt=" Map of hypothetical wind turbine farm in Colorado" src="{{ url_for('static', filename='images/cwc-main.jpg') }}"/>
+<!-- Content -->
+<p>
         This map is an overview of our hypothetical wind turbine farm as part of the 2020 Collegiate
         Wind
         Competition hosted by the Department of Energy. Part of the siting team presentation, this map
-        helped propel our team (James Madison University) to <a
-            href="https://www.jmu.edu/news/2020/06/24-collegiate-wind-competition.shtml">1st place</a>
+        helped propel our team (James Madison University) to <a href="https://www.jmu.edu/news/2020/06/24-collegiate-wind-competition.shtml">1st place</a>
         in
         the competition!
     </p>
