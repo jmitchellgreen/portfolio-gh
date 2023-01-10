@@ -13,6 +13,9 @@ def index():
 def about():
     return render_template("about/about.html")
 
+@app.route("/about/resume")
+def resume():
+    return render_template("about/J Mitchell Green Resume.html")
 
 @app.route("/archive")
 def posts():
