@@ -23,6 +23,7 @@ a {
     writing-mode: vertical-lr;
     font-size: 10vh;
     margin: 2vh;
+    padding: 5px;
 }
 
 #name {
@@ -76,6 +77,10 @@ sup {
     font-size: 60%;
 }
 
+div.references ol {
+    overflow: auto;
+}
+
 /* mobile screens */
 @media screen and (max-width: 700px) {
 
@@ -100,16 +105,19 @@ sup {
 
     #sidebar {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    ul {
+    ul.sidebar {
         top: 10vw;
     }
 
-    li {
+    li.sidebar {
         display: inline-block;
         font-size: 4vw;
-        padding-bottom: 5px;
+        padding: 10px;
     }
 
     .nav {
