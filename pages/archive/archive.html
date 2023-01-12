@@ -28,26 +28,28 @@
             for (let i = 0; i < tags.length; i++) {
                 tags[i].onclick = () => {
                     flag = !flag
-                    console.log("clicked tag: " + tags[i].innerHTML)
+                    let tag_text = tags[i].innerHTML
+                    console.log("clicked tag: " + tag_text)
 
-                    const match = tags.filter(tag => tag.innerHTML == tags[i].innerHTML)
-                    const inverse_match = tags.filter(tag => tag.innerHTML != tags[i].innerHTML)
+                    const posts_per_tag = Array.from(tags.map(x => x.parentElement.parentElement))
+                    const unique_posts = [... new Set(posts_per_tag)]
 
-                    const inverse_posts = inverse_match.map(x => x.parentElement.parentElement)
-                    const unique_posts = [... new Set(inverse_posts)]
-                    console.log(inverse_posts)
-                    console.log(unique_posts)
+                    unique_posts.map(post => {
+                        nodes = post.querySelectorAll('.tag')
+                        console.log(nodes)
 
-                    if (flag) {
-                        for (p of unique_posts) {
-                            p.style['display'] = 'none'
+                        for (node of nodes) {
+                            node_text = node.innerHTML
+                            if (node_text == tag_text) {
+                                console.log('here', post)
+                                continue
+                            }
                         }
-                    }
-                    if (!flag) {
-                        inverse_match.forEach(element => {
-                            element.parentElement.parentElement.style['display'] = ''
-                        })
-                    }
+                        if (node.includes(node_text) && post.style['display'] != 'none') {
+                            post.style['display'] = 'none'
+                            console.log('to remove', post)
+                        }
+                    })
                 }
             }
         }
