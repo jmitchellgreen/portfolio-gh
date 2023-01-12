@@ -21,9 +21,8 @@
     </div>
     <script>
         window.onload = () => {
-            const posts = Array.from(document.getElementsByClassName('post'))
-            const tags = Array.from(document.getElementsByClassName('tag'))
 
+            const tags = [...document.querySelectorAll('.tag')]
             let flag = false
 
             for (let i = 0; i < tags.length; i++) {
@@ -31,17 +30,24 @@
                     flag = !flag
                     console.log("clicked tag: " + tags[i].innerHTML)
 
-                    posts.find(node => {
-                        if (!node.querySelector('.tag').isEqualNode(tags[i]) && flag) {
-                            node.style["display"] = 'none'
-                            console.log('items to "none"')
-                        }
+                    const match = tags.filter(tag => tag.innerHTML == tags[i].innerHTML)
+                    const inverse_match = tags.filter(tag => tag.innerHTML != tags[i].innerHTML)
 
-                        if (!node.querySelector('.tag').isEqualNode(tags[i]) && !flag) {
-                            node.style["display"] = ''
-                            console.log('display this')
+                    const inverse_posts = inverse_match.map(x => x.parentElement.parentElement)
+                    const unique_posts = [... new Set(inverse_posts)]
+                    console.log(inverse_posts)
+                    console.log(unique_posts)
+
+                    if (flag) {
+                        for (p of unique_posts) {
+                            p.style['display'] = 'none'
                         }
-                    })
+                    }
+                    if (!flag) {
+                        inverse_match.forEach(element => {
+                            element.parentElement.parentElement.style['display'] = ''
+                        })
+                    }
                 }
             }
         }
