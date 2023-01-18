@@ -165,3 +165,7 @@ code::selection {
 span.material-symbols-outlined {
     vertical-align: middle;
 }
+
+.tag {
+    cursor: pointer;
+}

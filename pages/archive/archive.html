@@ -74,16 +74,12 @@
                                     tn.style['background-color'] = color
                                 }
                             }
-                            //arr.tag_clicked.style['background-color'] = 'green'
                         }
                         if (!flag) {
                             arr.post.style['display'] = ''
                             for (tn of tags_nodes) {
-                                if (tn.innerHTML == arr.tag_clicked.innerHTML) {
-                                    tn.style['background-color'] = ''
-                                }
+                                tn.style['background-color'] = ''
                             }
-                            //arr.tag_clicked.style['background-color'] = 'white'
                         }
                     }
                 }
