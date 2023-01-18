@@ -69,6 +69,9 @@ def archive():
             if "\n" in tags[0]:
                 tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(',')
                 tags = tags[0]
+                tags = [t.lstrip() for t in tags]
+            
+            tags = [t.strip() for t in tags]
 
             iso_date = date.fromisoformat(soup.find(class_="date").text)
             if iso_date is None: continue

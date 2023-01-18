@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-<!-- Title -->
-<h1>Weather4you</h1>
-<!-- Year -->
-<h2 class="date">2022-08-25</h2>
-<!-- Tags -->
-<div class="tags">
-<a href="/tags/">
-<h4 style="display: inline;">[Javascript, React.js, Mapbox/Maplibre GL JS, Recharts]</h4>
-</a>
-</div>
-<!-- Thumbnail -->
-<img alt="" src="{{ url_for('static', filename='images/weather4you.PNG') }}"/>
-<!-- Content -->
-<p>Weather4you is a front-end web application written with Javascript, React.js, Maplibre GL JS, and
-        Recharts.
+        <!-- Title -->
+        <h1>Weather4you</h1>
+        <!-- Year -->
+        <h2 class="date">2022-08-25</h2>
+        <!-- Tags -->
+        <div class="tags">
+                <a href="/tags/">
+                        <h4 style="display: inline;">[Javascript, React.js, Maplibre GL JS]</h4>
+                </a>
+        </div>
+        <!-- Thumbnail -->
+        <img alt="" src="{{ url_for('static', filename='images/weather4you.PNG') }}" />
+        <!-- Content -->
+        <p>Weather4you is a front-end web application written with Javascript, React.js, Maplibre GL JS, and
+                Recharts.
 
-        Click anywhere in the US to receive your forecast for the day and temperature for the week!
+                Click anywhere in the US to receive your forecast for the day and temperature for the week!
 
-        Data from the National Weather Service.</p>
+                Data from the National Weather Service.</p>
 </main>
 {% endblock %}

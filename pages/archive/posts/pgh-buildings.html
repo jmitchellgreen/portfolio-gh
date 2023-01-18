@@ -1,32 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 <script src="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js"></script>
-<link href="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css" rel="stylesheet"/>
+<link href="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css" rel="stylesheet" />
 <main>
-<!-- Title -->
-<h1>Every building in Pittsburgh, PA, 2022</h1>
-<!-- Year -->
-<h2 class="date">2022-05-29</h2>
-<!-- Tags -->
-<div class="tags">
-<a href="/tags/">
-<h4 style="display: inline;">[Mapbox/Maplibre GL JS, Python, OpenStreetMap, Node.js]</h4>
-</a>
-</div>
-<!-- Thumbnail -->
-<img alt="" src="{ url_for('static', filename='images/None') }"/>
-<!-- Content -->
-<div id="map" style="width: 100%; height: 400px;"></div>
-<script src="../../../static/javascript/pgh-buildings/osm.geojson"></script>
-<script src="../../../static/javascript/pgh-buildings/sm_buildings.geojson"></script>
-<script src="../../../static/javascript/pgh-buildings/pgh-buildings.js"></script>
-<p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
-        single building in Allegheny County. This project is made with Maplibre, an open-source fork of
-        the
-        popular Mapbox GL web mapping javascript library. The building data comes from OpenStreetMap's
-        (OSM)
-        API including OSM's own query language. The data is converted into a <code>geoJSON</code> using
-        a
-        python script.</p>
+        <!-- Title -->
+        <h1>Every building in Pittsburgh, PA, 2022</h1>
+        <!-- Year -->
+        <h2 class="date">2022-05-29</h2>
+        <!-- Tags -->
+        <div class="tags">
+                <a href="/tags/">
+                        <h4 style="display: inline;">[Maplibre GL JS, Python, OpenStreetMap, Node.js]</h4>
+                </a>
+        </div>
+        <!-- Thumbnail -->
+        <img alt="" src="{ url_for('static', filename='images/None') }" />
+        <!-- Content -->
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <script src="../../../static/javascript/pgh-buildings/osm.geojson"></script>
+        <script src="../../../static/javascript/pgh-buildings/sm_buildings.geojson"></script>
+        <script src="../../../static/javascript/pgh-buildings/pgh-buildings.js"></script>
+        <p>Zoom around Pittsburgh in this 3D visualization of (approximate) heights of every
+                single building in Allegheny County. This project is made with Maplibre, an open-source fork of
+                the
+                popular Mapbox GL web mapping javascript library. The building data comes from OpenStreetMap's
+                (OSM)
+                API including OSM's own query language. The data is converted into a <code>geoJSON</code> using
+                a
+                python script.</p>
 </main>
 {% endblock %}
