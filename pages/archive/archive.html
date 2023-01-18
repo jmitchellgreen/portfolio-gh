@@ -22,13 +22,15 @@
     <script>
         window.onload = () => {
 
+            const color = "#639a88ff"
             const tags = [...document.querySelectorAll('.tag')]
+            const tags_nodes = document.querySelectorAll('.tag')
             let flag = false
 
             for (let i = 0; i < tags.length; i++) {
                 tags[i].onclick = () => {
 
-                    // on click, change flag
+                    // on click, set flag to true
                     flag = !flag
 
                     let tag_text = tags[i].innerHTML
@@ -40,6 +42,7 @@
 
                     for (post of unique_posts) {
                         let display = null
+                        let tag_to_color = null
                         let nodes = post.querySelectorAll('.tag')
 
                         for (node of nodes) {
@@ -56,18 +59,31 @@
 
                         master_array.push({
                             post: post,
-                            display: display
+                            display: display,
+                            tag_clicked: tags[i]
                         })
 
                     }
 
-                    console.log(master_array)
-                    for (let i of master_array) {
-                        if (flag && i.display == false) {
-                            i.post.style['display'] = 'none'
+                    //console.log(master_array)
+                    for (let arr of master_array) {
+                        if (flag && arr.display == false) {
+                            arr.post.style['display'] = 'none'
+                            for (tn of tags_nodes) {
+                                if (tn.innerHTML == arr.tag_clicked.innerHTML) {
+                                    tn.style['background-color'] = color
+                                }
+                            }
+                            //arr.tag_clicked.style['background-color'] = 'green'
                         }
                         if (!flag) {
-                            i.post.style['display'] = ''
+                            arr.post.style['display'] = ''
+                            for (tn of tags_nodes) {
+                                if (tn.innerHTML == arr.tag_clicked.innerHTML) {
+                                    tn.style['background-color'] = ''
+                                }
+                            }
+                            //arr.tag_clicked.style['background-color'] = 'white'
                         }
                     }
                 }
