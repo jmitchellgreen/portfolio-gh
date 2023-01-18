@@ -27,30 +27,51 @@
 
             for (let i = 0; i < tags.length; i++) {
                 tags[i].onclick = () => {
+
+                    // on click, change flag
                     flag = !flag
+
                     let tag_text = tags[i].innerHTML
-                    console.log("clicked tag: " + tag_text)
 
                     const posts_per_tag = Array.from(tags.map(x => x.parentElement.parentElement))
                     const unique_posts = [... new Set(posts_per_tag)]
 
-                    unique_posts.map(post => {
-                        nodes = post.querySelectorAll('.tag')
-                        console.log(nodes)
+                    let master_array = []
+
+                    for (post of unique_posts) {
+                        let display = null
+                        let nodes = post.querySelectorAll('.tag')
 
                         for (node of nodes) {
-                            node_text = node.innerHTML
+                            let node_text = node.innerHTML
                             if (node_text == tag_text) {
-                                console.log('here', post)
-                                continue
+                                //console.log('to keep', post)
+                                display = true
+                                break
+                            } else {
+                                //console.log('to remove', post)
+                                display = false
                             }
                         }
-                        if (node.includes(node_text) && post.style['display'] != 'none') {
-                            post.style['display'] = 'none'
-                            console.log('to remove', post)
+
+                        master_array.push({
+                            post: post,
+                            display: display
+                        })
+
+                    }
+
+                    console.log(master_array)
+                    for (let i of master_array) {
+                        if (flag && i.display == false) {
+                            i.post.style['display'] = 'none'
                         }
-                    })
+                        if (!flag) {
+                            i.post.style['display'] = ''
+                        }
+                    }
                 }
+
             }
         }
     </script>
