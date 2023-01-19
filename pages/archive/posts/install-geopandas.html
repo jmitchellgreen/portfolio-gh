@@ -47,7 +47,8 @@
         <p>If you found this article, that means you most likely
             encountered issues installing the geopandas python library. If not, no worries! If you do not
             understand the above snippet in green, have no fear. The method described below is the smoothest entry (in
-            my experience) to begin coding with one of the popular geospatial python libraries to date.
+            my experience) to begin coding with one of the popular geospatial python libraries to date. I've written
+            this article out of personal experience and struggle, so if this is helpful in anyway, thank you!
         </p>
         <h3>History</h3>
         While I won't dive into the entire backstory of Open-source GIS, (though that may
@@ -57,7 +58,7 @@
         <p>Geopandas can arguably be described as the culmination of technology from the past two decades of
             advancement
             in GIS, python, and software development (1963 if you would like to get technical<sup><a
-                    href="#r3">[3]</a></sup>). I'll support this argument due to the fact that
+                    href="#references">[3]</a></sup>). I'll support this argument due to the fact that
             geopandas
             stands on the shoulders of giants; this python library is built on top of established and powerful
             geospatial code. Although this methodology is practical in order to avoid re-inventing the wheel,
@@ -72,7 +73,8 @@
             library?" Enter <em>dependencies</em>. You know how geopandas stands on the shoulders of giants? Well in
             this case, you gotta install those giants too.
         </p>
-        <div>A list of dependencies for geopandas according its official website<sup><a href="#r2">[2]</a></sup></div>
+        <div>A list of dependencies for geopandas according its official website<sup><a href="#references">[2]</a></sup>
+        </div>
         <blockquote>
             <ul>
                 <li>
@@ -119,10 +121,9 @@
         <h3>A Better Way (?)</h3>
         <p>The python community, specifically the scientific computing
             community notoriously struggled issues with package installation, dependicy errors, and library
-            management.<sup><a href="#r4">[4]</a></sup> So much so that they created their own package distribution:
-            Anaconda.
+            management.<sup><a href="#references">[4]</a></sup> So much so that they created their own package
+            distribution: Anaconda.
         </p>
-        <!-- GET TO THE POINT?? -->
         <p>Anaconda, self-described as <a href="https://www.anaconda.com/products/distribution">"The world's most
                 popular open-source Python distribution platform"</a> is a step closer into accessing geopandas.
         </p>
@@ -131,23 +132,38 @@
             relief and joy. Not so fast... there's more to this story and everything's not pretty.
         </p>
         <h3>Creeps and Bloats and Anacondas, oh my!</h3>
-        <p>To be continued...</p>
+        <p>At this point, you can technically finish the article. You have all the resources you need to conda install.
+            But, if you have read this far, you're probably like me and are particular and opinionated on technology
+            your passionate about. Then you may be surprised to learn that Anaconda "Minimum 3 GB disk space to download
+            and install" SOURCE.
+        </p>
+        <p>
+            "Three gigabits? Big deal", you mutter. That may be true, but let me explain. The default anaconda comes
+            pre-installed with many scientific python packages and the package manager, ready for you to jump right in
+            at the get-go. Personally I like to have control over what I download. While I understand this way fits the
+            needs of some users. Or, you're also like me and have an old computer and want to carefully manage storage
+            space on your device. However, if you are still trying to download geopandas or other packages, the file
+            footprint can quickly expand as you install large packages and including their dependecies.
+        </p>
+        <p>
+            What I'm proposing is that anaconda suffers from something called <a
+                href="https://en.wikipedia.org/wiki/Feature_creep">Feature Creep</a>. According its wiki, feature
+            creep is defined as the addition of unncessary features in a product. In software, this results in
+            component bloat, irrelavent utilities, and over-complication of the original product.
+        </p>
         <h3>Conclusion</h3>
         <h3>References</h3>
-        <div class="references">
+        <div id="references" class="references">
             <ol>
-                <li id="r1"><a
-                        href="http://wiki.gis.com/wiki/index.php/Intersect">http://wiki.gis.com/wiki/index.php/Intersect</a>
-                </li>
-                <li id="r2">
+                <li>
                     <a href="https://geopandas.org/en/stable/getting_started/install.html#dependencies">
                         https://geopandas.org/en/stable/getting_started/install.html#dependencies</a>
                 </li>
-                <li id="r3">
+                <li>
                     <a href="https: //www.esri.com/en-us/what-is-gis/history-of-gis">
                         https://www.esri.com/en-us/what-is-gis/history-of-gis</a>
                 </li>
-                <li id="r4">
+                <li>
                     <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview">
                         https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview</a>
                 </li>
