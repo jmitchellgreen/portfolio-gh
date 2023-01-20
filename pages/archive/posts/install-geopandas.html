@@ -8,9 +8,9 @@
     <h4 class="date">2023-01-20</h4>
     <!-- Tags -->
     <div class="tags">
-        <h4 style="display: inline;">Geopandas</h4>
-        <h4 style="display: inline;">Python</h4>
-        <h4 style="display: inline;">Blog</h4>
+        <p style="display: inline;">Geopandas</p>
+        <p style="display: inline;">Python</p>
+        <p style="display: inline;">Blog</p>
     </div>
 
     <!-- Content -->
@@ -50,15 +50,15 @@
             my experience) to begin coding with one of the popular geospatial python libraries to date. I've written
             this article out of personal experience and struggle, so if this is helpful in anyway, thank you!
         </p>
-        <h3>History</h3>
-        <p>While I won't dive into the entire backstory of Open-source GIS, (though that may
+        <h3>Background</h3>
+        <p>While I won't dive into the entire history of Open-source GIS, (though that may
             be an intriguing article for another time...) I want to provide some context into why we must take this
             seemingly roundabout approach to simply install a python library.
         </p>
         <p>Geopandas can arguably be described as the culmination of technology from the past two decades of
             advancement
             in GIS, python, and software development (1963 if you would like to get technical<sup><a
-                    href="#references">[3]</a></sup>). I'll support this argument due to the fact that
+                    href="#references">[1]</a></sup>). I'll support this argument due to the fact that
             geopandas
             stands on the shoulders of giants; this python library is built on top of established and powerful
             geospatial code. Although this methodology is practical in order to avoid re-inventing the wheel,
@@ -122,10 +122,11 @@
         <h3>A Better Way (?)</h3>
         <p>The python community, specifically the scientific computing
             community notoriously struggled issues with package installation, dependicy errors, and library
-            management.<sup><a href="#references">[4]</a></sup> So much so that they created their own package
+            management.<sup><a href="#references">[3]</a></sup> So much so that they created their own package
             distribution: Anaconda.
         </p>
-        <p>Anaconda, self-described as <a href="https://www.anaconda.com/products/distribution">"The world's most
+        <p>Anaconda (or conda for short), self-described as <a
+                href="https://www.anaconda.com/products/distribution">"The world's most
                 popular open-source Python distribution platform"</a> is a step closer into accessing geopandas.
         </p>
         <p>"A step?", you say, "This sounds like a solution. No, <em>the</em> solution!". "We just need to get this
@@ -133,11 +134,11 @@
             relief and joy. Not so fast... there's more to this story and everything's not pretty.
         </p>
         <h3>Creeps and Bloats and Anacondas, oh my!</h3>
-        <p>At this point, you can technically finish the article. You have all the resources you need toConda install.
+        <p>At this point, you can technically finish the article. You have all the resources you need to Conda install.
             But, if you have read this far, you're probably like me and are particular and opinionated on technology
-            your passionate about. Then you may be surprised to learn that Anaconda (or Conda for short) requires
-            a "Minimum 3 of GB of disk space to download and install" SOURCE, not including the packages you actually
-            need!
+            your passionate about. Then you may be surprised to learn that conda requires a "Minimum 3 of GB of disk
+            space to download and install" <sup><a href="#references">[4]</a></sup>, not including the packages you
+            actually need!
         </p>
         <p>"Three gigabytes? Big deal", you mutter. That may be true, but let me explain. The default Conda comes
             pre-installed with many scientific python packages and the package manager, ready for you to jump right in
@@ -148,32 +149,45 @@
             including their dependecies.
         </p>
         <p>What I'm asserting is that Conda suffers from something called <a
-                href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>. According its wiki, feature
+                href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>. According its wikipedia, feature
             creep is defined as the addition of unncessary features in a product. In software, this results in
             component bloat, irrelavent utilities, and over-complication of the original product.
         </p>
-        <p>I argue Conda suffers this due to the fact that they have an alternative python package manager:
-            <a href="https://docs.conda.io/en/latest/miniconda.html"> Miniconda</a>. Miniconda is a "bootstrapped"
-            version of Conda standing at only 400 megabytes. Without the 'unncessary' packages, you can jumpstart in a
-            lean and mean package manager.
+        <p>I will argue Conda suffers from feature creep due large part that Anaconda also provies an alternative python
+            package manager: <a href="https://docs.conda.io/en/latest/miniconda.html"> Miniconda</a>. Miniconda is a
+            "bootstrapped" version of conda standing at only 400 megabytes. Without the 'unncessary' packages, you can
+            jumpstart in a lean and mean package manager.
         </p>
-        <p>
+        <p>This is why I brought you through this winding tale. Because I tried all methods above. I tried to pip
+            install. I downloaded conda. And now I've settle on miniconda. As the smoothest and least intrusive solution
+            to downloading a python package.
         </p>
         <h3>Conclusion</h3>
+        <p>In summary, <b>I strongly suggest you use miniconda and install via conda-forge channel.</b> I hope this
+            article assists you with your geopandas journey in the future! If you enjoyed this article, let me know! If
+            you didn't, well I tried my best and that's what counts. You can contact me
+            via the <a href="/about">/about</a> section of this website.
+        </p>
         <h3>References</h3>
         <div id="references" class="references">
             <ol>
-                <li>
-                    <a href="https://geopandas.org/en/stable/getting_started/install.html#dependencies">
-                        https://geopandas.org/en/stable/getting_started/install.html#dependencies</a>
-                </li>
                 <li>
                     <a href="https: //www.esri.com/en-us/what-is-gis/history-of-gis">
                         https://www.esri.com/en-us/what-is-gis/history-of-gis</a>
                 </li>
                 <li>
+                    <a href="https://geopandas.org/en/stable/getting_started/install.html#dependencies">
+                        https://geopandas.org/en/stable/getting_started/install.html#dependencies</a>
+                </li>
+                <li>
                     <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview">
                         https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)#Overview</a>
+                </li>
+                <li>
+                    <a
+                        href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/download.html#anaconda-or-miniconda">
+                        https://docs.conda.io/projects/conda/en/stable/user-guide/install/download.html#anaconda-or-miniconda
+                    </a>
                 </li>
             </ol>
         </div>
