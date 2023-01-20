@@ -5,7 +5,7 @@
     <h1>How to Install Geopandas</h1>
     <h2>The easy way, the way you probably tried first, and how the hell we got to this point.</h2>
     <h3><a href="/about"><span class="material-symbols-outlined">person</span>Mitchell Green</a></h3>
-    <h4 class="date">2022-12-12</h4>
+    <h4 class="date">2023-01-20</h4>
     <!-- Tags -->
     <div class="tags">
         <h4 style="display: inline;">Geopandas</h4>
@@ -51,9 +51,9 @@
             this article out of personal experience and struggle, so if this is helpful in anyway, thank you!
         </p>
         <h3>History</h3>
-        While I won't dive into the entire backstory of Open-source GIS, (though that may
-        be an intriguing article for another time...) I want to provide some context into why we must take this
-        seemingly roundabout approach to simply install a python library.
+        <p>While I won't dive into the entire backstory of Open-source GIS, (though that may
+            be an intriguing article for another time...) I want to provide some context into why we must take this
+            seemingly roundabout approach to simply install a python library.
         </p>
         <p>Geopandas can arguably be described as the culmination of technology from the past two decades of
             advancement
@@ -73,8 +73,8 @@
             library?" Enter <em>dependencies</em>. You know how geopandas stands on the shoulders of giants? Well in
             this case, you gotta install those giants too.
         </p>
-        <div>A list of dependencies for geopandas according its official website<sup><a href="#references">[2]</a></sup>
-        </div>
+        <p>A list of dependencies for geopandas according its official website<sup><a href="#references">[2]</a></sup>
+        </p>
         <blockquote>
             <ul>
                 <li>
@@ -105,11 +105,12 @@
         <br />
         <p>If you were like me and chomping at the bit to just get started with geopandas <em>and</em> tried to install
             via pip (like the majority of python packages), I'm guessing you may have ran into issues.
-        </p>The biggest hurdle for installation include those odd little interfaces. The initial python packages
-        (shapely, fiona, pyproj) are ports of C/C++ libraries. Fun fact - some of those C/C++ libraries are ports of
-        Java libraries! The tricky part is that geopandas requires a combination of the C/C++ libraries <em>and</em>
-        their correct version. If you have ever tried downloading and managing C/C++ libraries, the experience can
-        be less than desirable.
+        </p>
+        <p>The biggest hurdle for installation include those odd little interfaces. The initial python packages
+            (shapely, fiona, pyproj) are ports of C/C++ libraries. Fun fact - some of those C/C++ libraries are ports of
+            Java libraries! The tricky part is that geopandas requires a combination of the C/C++ libraries <em>and</em>
+            their correct version. If you have ever tried downloading and managing C/C++ libraries, the experience can
+            be less than desirable.
         </p>
         <p>In fact, I'm sure at this point you may have been annoyed, even frustrated. "I just want to make a damn
             map!", you proclaim. "What is this C binary package and why must I download this?"</p>
@@ -132,24 +133,31 @@
             relief and joy. Not so fast... there's more to this story and everything's not pretty.
         </p>
         <h3>Creeps and Bloats and Anacondas, oh my!</h3>
-        <p>At this point, you can technically finish the article. You have all the resources you need to conda install.
+        <p>At this point, you can technically finish the article. You have all the resources you need toConda install.
             But, if you have read this far, you're probably like me and are particular and opinionated on technology
-            your passionate about. Then you may be surprised to learn that Anaconda "Minimum 3 GB disk space to download
-            and install" SOURCE.
+            your passionate about. Then you may be surprised to learn that Anaconda (or Conda for short) requires
+            a "Minimum 3 of GB of disk space to download and install" SOURCE, not including the packages you actually
+            need!
         </p>
-        <p>
-            "Three gigabits? Big deal", you mutter. That may be true, but let me explain. The default anaconda comes
+        <p>"Three gigabytes? Big deal", you mutter. That may be true, but let me explain. The default Conda comes
             pre-installed with many scientific python packages and the package manager, ready for you to jump right in
             at the get-go. Personally I like to have control over what I download. While I understand this way fits the
-            needs of some users. Or, you're also like me and have an old computer and want to carefully manage storage
-            space on your device. However, if you are still trying to download geopandas or other packages, the file
-            footprint can quickly expand as you install large packages and including their dependecies.
+            needs of some users, I dislike downloading anything I don't need. Or, you're also like me and have an old
+            computer and want to carefully manage storage space on your device. However, if you are still trying to
+            download geopandas or other packages, the file footprint can quickly expand as you install large packages
+            including their dependecies.
         </p>
-        <p>
-            What I'm proposing is that anaconda suffers from something called <a
-                href="https://en.wikipedia.org/wiki/Feature_creep">Feature Creep</a>. According its wiki, feature
+        <p>What I'm asserting is that Conda suffers from something called <a
+                href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>. According its wiki, feature
             creep is defined as the addition of unncessary features in a product. In software, this results in
             component bloat, irrelavent utilities, and over-complication of the original product.
+        </p>
+        <p>I argue Conda suffers this due to the fact that they have an alternative python package manager:
+            <a href="https://docs.conda.io/en/latest/miniconda.html"> Miniconda</a>. Miniconda is a "bootstrapped"
+            version of Conda standing at only 400 megabytes. Without the 'unncessary' packages, you can jumpstart in a
+            lean and mean package manager.
+        </p>
+        <p>
         </p>
         <h3>Conclusion</h3>
         <h3>References</h3>
