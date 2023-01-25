@@ -3,7 +3,7 @@ from archive import archive
 
 pp = Blueprint('parking-proliferation',
                 __name__,
-                template_folder="pages/archive/posts/parking-proliferation/build",
+                template_folder=r"pages/archive/posts/parking-proliferation/build",
                 static_url_path="",
                 static_folder=r"pages\archive\posts\parking-proliferation\build")
 
@@ -11,9 +11,6 @@ app = Flask(__name__,
             template_folder="pages",
             static_folder="static",
             static_url_path="/foo") # bruh idk anymore
-
-app.config['TESTING'] = True
-app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
 
 @app.route("/")
@@ -36,7 +33,7 @@ def posts():
 def post(post_title):
     return render_template(f"archive/posts/{post_title}.html")
 
-@pp.route("/parking-proliferation")
+@pp.route("/app")
 def parking_proliferation():
     return render_template("index.html")
 
