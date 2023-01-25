@@ -1,13 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Blueprint, send_from_directory
 from archive import archive
 
-app = Flask(__name__, template_folder="pages")
+
+app = Flask(__name__,
+            template_folder="pages",
+            static_url_path="",
+            static_folder=r"pages\archive\posts\parking-proliferation\build")
+
+app.config['TESTING'] = True
+app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
 
 @app.route("/")
 def index():
-    return render_template("index/index.html")
-
+    return render_template("/index/home.html")
 
 @app.route("/about")
 def about():
@@ -21,7 +27,10 @@ def resume():
 def posts():
     return render_template("archive/archive.html", my_archive=archive())
 
-
 @app.route("/archive/<post_title>")
 def post(post_title):
     return render_template(f"archive/posts/{post_title}.html")
+
+@app.route("/parking-proliferation")
+def parking_proliferation():
+    return render_template("archive/posts/parking-proliferation/build/index.html")

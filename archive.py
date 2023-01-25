@@ -51,42 +51,45 @@ def archive():
 
     my_archive = []
     for file in files:
-        with open(f"./pages/archive/posts/{file}") as f:
+        try:
+            with open(f"./pages/archive/posts/{file}") as f:
 
-            # soup for each .html
-            soup = BeautifulSoup(f, features="html.parser")
+                # soup for each .html
+                soup = BeautifulSoup(f, features="html.parser")
 
-            url = file[:-5]
+                url = file[:-5]
 
-            title = soup.h1.text
-            # remove year in title
-            if ", 20" in title:
-                title = title[:-6]
+                title = soup.h1.text
+                # remove year in title
+                if ", 20" in title:
+                    title = title[:-6]
 
-            # format tags new and old
-            tags = [tag.text.strip('\n').strip('[').strip(']').split(',') for tag in soup.find_all(class_="tags")]
-            tags = tags[0]
-            if "\n" in tags[0]:
-                tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(',')
+                # format tags new and old
+                tags = [tag.text.strip('\n').strip('[').strip(']').split(',') for tag in soup.find_all(class_="tags")]
                 tags = tags[0]
-                tags = [t.lstrip() for t in tags]
+                if "\n" in tags[0]:
+                    tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(',')
+                    tags = tags[0]
+                    tags = [t.lstrip() for t in tags]
+                
+                tags = [t.strip() for t in tags]
+
+                iso_date = date.fromisoformat(soup.find(class_="date").text)
+                if iso_date is None: continue
             
-            tags = [t.strip() for t in tags]
 
-            iso_date = date.fromisoformat(soup.find(class_="date").text)
-            if iso_date is None: continue
+                archive_obj = {
+                    "url": url,
+                    "title": title,
+                    "tags": tags,
+                    "iso_date": iso_date,
+                    "date": iso_date.strftime("%Y %b %d"),
+                }
+
+                my_archive.append(archive_obj)
+        except:
+            continue
         
-
-            archive_obj = {
-                "url": url,
-                "title": title,
-                "tags": tags,
-                "iso_date": iso_date,
-                "date": iso_date.strftime("%Y %b %d"),
-            }
-
-            my_archive.append(archive_obj)
-
     sorted_obj = sorted(
         my_archive, key=lambda archive: archive["iso_date"], reverse=True
     )
