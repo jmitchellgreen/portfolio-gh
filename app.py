@@ -1,11 +1,16 @@
-from flask import Flask, render_template, Blueprint, send_from_directory
+from flask import Flask, render_template, Blueprint
 from archive import archive
 
+bp = Blueprint('parking-proliferation',
+                __name__,
+                template_folder="pages/archive/posts/parking-proliferation/build",
+                static_url_path="",
+                static_folder=r"pages\archive\posts\parking-proliferation\build")
 
 app = Flask(__name__,
             template_folder="pages",
-            static_url_path="",
-            static_folder=r"pages\archive\posts\parking-proliferation\build")
+            static_folder="static",
+            static_url_path="/foo") # bruh idk anymore
 
 app.config['TESTING'] = True
 app.config['EXPLAIN_TEMPLATE_LOADING'] = True
@@ -31,6 +36,9 @@ def posts():
 def post(post_title):
     return render_template(f"archive/posts/{post_title}.html")
 
-@app.route("/parking-proliferation")
+@bp.route("/parking-proliferation")
 def parking_proliferation():
-    return render_template("archive/posts/parking-proliferation/build/index.html")
+    return render_template("index.html")
+
+
+app.register_blueprint(bp)
