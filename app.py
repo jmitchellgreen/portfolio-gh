@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Blueprint
 from archive import archive
 
-bp = Blueprint('parking-proliferation',
+pp = Blueprint('parking-proliferation',
                 __name__,
                 template_folder="pages/archive/posts/parking-proliferation/build",
                 static_url_path="",
@@ -36,9 +36,9 @@ def posts():
 def post(post_title):
     return render_template(f"archive/posts/{post_title}.html")
 
-@bp.route("/parking-proliferation")
+@pp.route("/parking-proliferation")
 def parking_proliferation():
     return render_template("index.html")
 
 
-app.register_blueprint(bp)
+app.register_blueprint(pp)
