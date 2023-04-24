@@ -6,7 +6,7 @@ body {
 }
 
 ::selection {
-    background: #639a88ff;
+    background: #639a88;
 }
 
 a:hover {
@@ -31,6 +31,8 @@ a {
     top: 60%;
     left: 50%;
     font-size: 10vw;
+    background-color: white;
+    border-radius: 35%;
 }
 
 .nav {

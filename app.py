@@ -10,7 +10,7 @@ pp = Blueprint(
 )
 
 app = Flask(
-    __name__, template_folder="pages", static_folder="static", static_url_path="/foo"
+    __name__, template_folder="pages", static_folder="static"
 )  # bruh idk anymore
 
 
