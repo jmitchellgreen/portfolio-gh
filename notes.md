@@ -4,8 +4,8 @@
 ## To Do
 - [X] Create python file to reformat existing html
 - [ ] Modify Post.create_post() to an updated AND generic template for articles
-- [ ] Figure what to do for parking-proliferation
-- [ ] fix pgh steps
+- [ ] Figure what to do for parking-proliferation (radius?)
+- [X] fix pgh steps
 - [X] Begin to write geopandas installation article
   - [ ] Format spacing in article between tags and content
   - [X] Fix nav bar in mobile view
