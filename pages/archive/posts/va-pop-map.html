@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-<!-- Title -->
-<h1>Virginia Population, 2019</h1>
-<!-- Year -->
-<h2 class="date">2019-04-01</h2>
-<!-- Tags -->
-<div class="tags">
-<a href="/tags/">
-<h4 style="display: inline;">[ArcMap]</h4>
-</a>
-</div>
-<!-- Thumbnail -->
-<img alt="" src="{{ url_for('static', filename='images/green_geog365_virginia_pop-1.jpg') }}"/>
-<!-- Content -->
-<p>This map combines choropleth and graduated symbol maps to dispaly Virginia's population as of
-        2010.
-        Data from the Census Bureau.</p>
+        <!-- Title -->
+        <h1>Virginia Population, 2019</h1>
+        <!-- Year -->
+        <h2 class="date">2019-04-01</h2>
+        <!-- Tags -->
+        <div class="tags">
+                <a href="/tags/">
+                        <h4 style="display: inline;">[ArcMap]</h4>
+                </a>
+        </div>
+        <!-- Thumbnail -->
+        <img alt="" src="{{ url_for('static', filename='images/green_geog365_virginia_pop-1.jpg') }}" />
+        <!-- Content -->
+        <p>This map combines choropleth and graduated symbol maps to dispaly Virginia's population as of
+                2010.
+                Data from the Census Bureau.</p>
 </main>
 {% endblock %}

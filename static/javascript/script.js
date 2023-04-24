@@ -4,7 +4,7 @@ let promises = [d3.json('https://gist.githubusercontent.com/phil-pedruco/1044708
 
 
 Promise.all(promises).then(data => {
-    console.log(data)
+    // console.log(data)
 
     const width = 200
     const height = 200

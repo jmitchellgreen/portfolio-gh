@@ -28,7 +28,7 @@ a {
 
 #name {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     font-size: 10vw;
 }
@@ -81,6 +81,14 @@ div.references ol {
     overflow: auto;
 }
 
+#col-1 {
+    flex-grow: 1;
+}
+
+#col-3 {
+    flex-grow: 2;
+}
+
 /* mobile screens */
 @media screen and (max-width: 700px) {
 
@@ -90,10 +98,19 @@ div.references ol {
         margin: 0;
     }
 
+    #globe {
+        margin-top: 35vw;
+    }
+
+    #col-1,
+    #col-3 {
+        flex-grow: 1;
+    }
+
     #name {
         font-size: 20vw;
         padding: 5vw;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-20%);
     }
 
     #home {
