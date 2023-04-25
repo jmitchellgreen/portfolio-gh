@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import os
 from datetime import date
+import pprint
 
 # depreciated func
 def archive2():
@@ -65,18 +66,21 @@ def archive():
                     title = title[:-6]
 
                 # format tags new and old
-                tags = [tag.text.strip('\n').strip('[').strip(']').split(',') for tag in soup.find_all(class_="tags")]
+                tags = [
+                    tag.text.strip("\n").strip("[").strip("]").split(",")
+                    for tag in soup.find_all(class_="tags")
+                ]
                 tags = tags[0]
                 if "\n" in tags[0]:
-                    tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(',')
+                    tags[0] = tags[0].replace("\r", "").replace("\n", ",").split(",")
                     tags = tags[0]
                     tags = [t.lstrip() for t in tags]
-                
+
                 tags = [t.strip() for t in tags]
 
                 iso_date = date.fromisoformat(soup.find(class_="date").text)
-                if iso_date is None: continue
-            
+                if iso_date is None:
+                    continue
 
                 archive_obj = {
                     "url": url,
@@ -89,10 +93,15 @@ def archive():
                 my_archive.append(archive_obj)
         except:
             continue
-        
+
     sorted_obj = sorted(
         my_archive, key=lambda archive: archive["iso_date"], reverse=True
     )
+
+    # remove weather4you page (for now...)
+    sorted_obj = [x for x in sorted_obj if "weather4you" not in x["url"]]
+
+    # pprint.pprint(sorted_obj)
     return sorted_obj
 
 
