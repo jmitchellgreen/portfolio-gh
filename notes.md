@@ -17,3 +17,4 @@
 - [X] Fix horizonal scroll on mobile
 - [X] Make tags work
 - [ ] Update write date
+- [ ] Update tags in articles

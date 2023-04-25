@@ -1,6 +1,5 @@
 
-let promises = [d3.json('https://gist.githubusercontent.com/phil-pedruco/10447085/raw/426fb47f0a6793776a044f17e66d17cbbf8061ad/countries.geo.json'),
-]
+let promises = [d3.json('https://gist.githubusercontent.com/phil-pedruco/10447085/raw/426fb47f0a6793776a044f17e66d17cbbf8061ad/countries.geo.json')]
 
 
 Promise.all(promises).then(data => {
@@ -26,7 +25,7 @@ Promise.all(promises).then(data => {
     const projection = d3.geoOrthographic()
         .fitSize([width, height], data[0])
 
-    const geopath = d3.geoPath().projection(projection)
+    let geopath = d3.geoPath().projection(projection)
 
     svg.append("path")
         .datum(data[0])
@@ -35,13 +34,12 @@ Promise.all(promises).then(data => {
         .style("stroke-width", "0.5px")
         .attr("d", geopath)
 
-    function enableRotation() {
-        d3.timer(function (elapsed) {
-            projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-            svg.selectAll("path").attr("d", geopath);
-        });
-    }
 
-    enableRotation()
+    d3.timer(function (elapsed) {
+        projection.rotate([config.speed * elapsed - 300, config.verticalTilt, config.horizontalTilt]);
+        svg.selectAll("path").attr("d", geopath);
+    });
+
+
 
 })
