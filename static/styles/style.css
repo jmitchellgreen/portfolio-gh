@@ -40,7 +40,7 @@ a {
 }
 
 li.sidebar {
-    font-size: 4vh;
+    font-size: 6vh;
 }
 
 ul.sidebar {
@@ -81,12 +81,20 @@ div.references ol {
     overflow: auto;
 }
 
+#col-container {
+    display: flex;
+}
+
+#globe {
+    flex-grow: 1;
+}
+
 #col-1 {
     flex-grow: 1;
 }
 
 #col-3 {
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 /* mobile screens */
@@ -97,6 +105,7 @@ div.references ol {
         max-width: 90vw;
         margin: 0;
     }
+
 
     #globe {
         margin-top: 35vw;
@@ -162,6 +171,10 @@ div.references ol {
 
 .tags a {
     text-decoration: none;
+}
+
+.tags {
+    margin-bottom: 1em;
 }
 
 p {

@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <main>
-<!-- Title -->
-<h1 class="title">Alabama, 2019</h1>
-<!-- Year -->
-<h2 class="date">2019-10-01</h2>
-<!-- Tags -->
-<div class="tags">
-<a href="/tags/">
-<h4 style="display: inline;">[ArcPro, Adobe Illustrator]</h4>
-</a>
-</div>
-<!-- Thumbnail -->
-<img alt="" src="{{ url_for('static', filename='images/green_geog365_columbus_col.png') }}"/>
-<!-- Content -->
-<p>
+    <!-- Title -->
+    <h1 class="title">Alabama, 2019</h1>
+    <!-- Year -->
+    <h2 class="date">2019-10-01</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <p style="display: inline;">ArcPro</p>
+        <p style="display: inline;">Adobe Illustrator</p>
+    </div><!-- Thumbnail -->
+    <img alt="" src="{{ url_for('static', filename='images/green_geog365_columbus_col.png') }}" />
+    <!-- Content -->
+    <p>
         A simple yet thoughtful reference map of Alabama. Created using ArcPro and Adobe Illustrator.
     </p>
 </main>
