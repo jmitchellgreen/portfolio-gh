@@ -87,6 +87,8 @@ div.references ol {
 
 #globe {
     flex-grow: 1;
+    height: 90vh;
+    padding-top: 10vh;
 }
 
 #col-1 {
