@@ -27,9 +27,12 @@ a {
 }
 
 #name {
+    padding-left: 5rem;
+    border-left: solid black 40px;
+    background-color: white;
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 40%;
     font-size: 10vw;
 }
 
