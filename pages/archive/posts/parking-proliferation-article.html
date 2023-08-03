@@ -4,21 +4,24 @@
     <!-- Title -->
     <h1 class="title">Parking Proliferation</h1>
     <!-- Year -->
-    <h2 class="date">2023-02-03</h2>
+    <h2 class="date">2023-08-03</h2>
     <!-- Tags -->
     <div class="tags">
         <p style="display: inline;">Javascript</p>
         <p style="display: inline;">React</p>
         <p style="display: inline;">Maplibre GL JS</p>
-        <!-- <p style="display: inline;">OpenStreetMap</p> -->
         <p style="display: inline;">Tailwind CSS</p>
 
     </div>
     <!-- Thumbnail -->
     <img alt="" src="{{ url_for('static', filename='images/parking-proliferation.png') }}" />
-    <a href="/archive/parking-proliferation">Click here to launch app</a>
+    <p>Click <a href="/archive/parking-proliferation">here</a> to launch app</p>
     <p>
-        Parking Proliferation
+        The goal of <b>Parking Proliferation</b> is to highlight the absurdity of the abduance of parking lots in
+        downtown city and town centers. To achieve this, I created a web map app to highlight all parking lots within a
+        given city, town, or neighborhood district (according to OpenStreetMap data). I query all polygons tagged wtih
+        parking and use Turf.js to calculate the area. Built with Maplibre GL JS (open source Mapbox), React, and
+        Tailwind CSS.
     </p>
 </main>
 {% endblock %}

@@ -2,25 +2,25 @@
 {% block content %}
 <main>
 
-        <!-- Title -->
-        <h1 class="title">Every step in Pittsburgh</h1>
-        <!-- Year -->
-        <h2 class="date">2022-05-13</h2>
-        <!-- Tags -->
-        <div class="tags">
-                <a href="/tags/">
-                        <h4 style="display: inline;">D3.js</h4>
-                        <h4 style="display: inline;">Javascript</h4>
-                </a>
-        </div>
-        <div id="map"></div>
+    <!-- Title -->
+    <h1 class="title">Every step in Pittsburgh</h1>
+    <!-- Year -->
+    <h2 class="date">2022-05-13</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <a href="/tags/">
+            <h4 style="display: inline;">d3.js</h4>
+            <h4 style="display: inline;">Javascript</h4>
+        </a>
+    </div>
+    <div id="map"></div>
 
-        <!-- Content -->
-        <p>Pittsburgh is hilly. Each spike is a public staircase, and the height is the number of steps.
-                Data
-                sourced from the Western Pennsylvania Regional Data Center.</p>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='javascript/pgh-steps/d3.js') }}"
-                type="module"></script>
+    <!-- Content -->
+    <p>Pittsburgh is hilly. Each spike is a public staircase, and the height is the number of steps.
+        Data
+        sourced from the Western Pennsylvania Regional Data Center.</p>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/pgh-steps/d3.js') }}"
+        type="module"></script>
 </main>
 {% endblock %}
