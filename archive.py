@@ -98,10 +98,20 @@ def archive():
         my_archive, key=lambda archive: archive["iso_date"], reverse=True
     )
 
-    # remove weather4you page (for now...)
-    sorted_obj = [x for x in sorted_obj if "weather4you" not in x["url"]]
+    removals = [
+        "weather4you",
+        "wv-map",
+        "va-pop-map",
+        "qgis-plugin",
+        "otter-tail-map",
+        "nw-usa-map",
+        "install-geopandas",  # for now...
+        "ffosm",
+    ]
 
-    # pprint.pprint(sorted_obj)
+    # remove pages (for now...)
+    sorted_obj = [x for x in sorted_obj if x["url"] not in removals]
+
     return sorted_obj
 
 

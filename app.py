@@ -9,9 +9,7 @@ pp = Blueprint(
     static_folder=r"pages\archive\posts\parking-proliferation\build",
 )
 
-app = Flask(
-    __name__, template_folder="pages", static_folder="static"
-)  # bruh idk anymore
+app = Flask(__name__, template_folder="pages", static_folder="static")
 
 
 @app.route("/")
