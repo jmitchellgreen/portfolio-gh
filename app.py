@@ -1,6 +1,5 @@
 from flask import Flask, render_template, Blueprint
 from archive import archive
-from dc_trees import get_mvt
 
 pp = Blueprint(
     "parking-proliferation",
