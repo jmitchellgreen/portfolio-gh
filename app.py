@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Blueprint
 from archive import archive
+from dc_trees import get_mvt
 
 pp = Blueprint(
     "parking-proliferation",
@@ -22,9 +23,9 @@ def about():
     return render_template("about/about.html")
 
 
-@app.route("/about/resume")
-def resume():
-    return render_template("about/J Mitchell Green Resume.html")
+# @app.route("/about/resume")
+# def resume():
+#     return render_template("about/J Mitchell Green Resume.html")
 
 
 @app.route("/archive")
@@ -35,6 +36,12 @@ def posts():
 @app.route("/archive/<post_title>")
 def post(post_title):
     return render_template(f"archive/posts/{post_title}.html")
+
+
+@app.route("/archive/dc-trees-article")
+def dc_trees():
+    get_mvt()
+    return render_template("archive/posts/dc-trees-article.html")
 
 
 @pp.route("/archive/parking-proliferation")

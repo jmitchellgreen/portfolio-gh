@@ -1,0 +1,31 @@
+#container {
+    position: relative;
+    display: inline-block;
+}
+
+#container img {
+    display: block;
+    max-width: 75%;
+    height: auto;
+}
+
+#container svg {
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    z-index: 1;
+    fill: #e9ebf1;
+}
+
+#container text {
+    font: normal 27.5px serif;
+    transform: scale(1, 1.5);
+    fill: #192b71;
+    stroke: #a7b4bf60;
+    stroke-width: 0.5px;
+}
+
+button {
+    position: relative;
+    z-index: 10;
+}

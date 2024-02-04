@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1 class="title">Banned License Plates</h1>
+    <!-- Year -->
+    <h2 class="date">2024-02-04</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <p style="display: inline;">Javascript</p>
+    </div>
+    <!-- Thumbnail -->
+    <!-- putting thumbnnail as optional... -->
+    <!-- <img alt="" src="{{ url_for('static', filename='images/denied-plates/example-plate.png') }}" /> -->
+    <!-- Content -->
+    <h1>Denied Plates</h1>
+    <h2>All Denied plates from Virginia DMV from 2021</h2>
+    <div id="container">
+        <img id="baseplate" src="{{ url_for('static', filename='images/denied-plates/va-plate.png') }}">
+        <svg viewBox="0 0 200 200">
+            <rect width="140" height="40" rx="2" />
+            <text id="plate-text" x="35%" y="8%" alignment-baseline="middle" text-anchor="middle"></text>
+        </svg>
+    </div>
+    <div id="get-plate">
+        <button onclick="getPlate()">Get random plate</button>
+    </div>
+    <div id="filters">
+        <div></div>
+    </div>
+    <script type="text/javascript">
+        async function getPlate() {
+            const response = await fetch("{{ url_for('static', filename='javascript/denied-plates/data/denied-plates.json') }}");
+            const plates = await response.json();
+            // console.log(plates)
+            array = plates['2021']
+            let randomPlate = array[Math.floor(Math.random() * array.length)];
+            document.getElementById("plate-text").innerHTML = randomPlate
+
+        }
+    </script>
+</main>
+{% endblock %}

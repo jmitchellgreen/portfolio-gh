@@ -11,3 +11,4 @@ New Idea List
 - [ ] Souncloud/alt streaming
   - [ ] history of music consumption
 - [ ] History of the shoe
+- [ ] Are StackOverflow answers really pretentious?
