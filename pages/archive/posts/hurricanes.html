@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <!-- Title -->
+    <h1 class="title">Hurricanes</h1>
+    <!-- Year -->
+    <h2 class="date">2024-04-03</h2>
+    <!-- Tags -->
+    <div class="tags">
+        <p style="display: inline;">QGIS</p>
+        <p style="display: inline;">Python</p>
+        <p style="display: inline;">geopandas</p>
+        <p style="display: inline;">pandas</p>
+    </div>
+    <!-- Content -->
+    <div id="container">
+        <img id="hurricanes" src="{{url_for('static', filename='images/hurriances.gif' )}}">
+    </div>
+    <p>
+        Animated map of Atlantic hurricanes, from 1851 to 2021. Create with python and QGIS.
+    </p>
+
+</main>
+{% endblock %}

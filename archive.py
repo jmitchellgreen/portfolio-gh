@@ -107,6 +107,7 @@ def archive():
         "nw-usa-map",
         "install-geopandas",  # for now...
         "ffosm",
+        "vending-machines"
     ]
 
     # remove pages (for now...)
