@@ -12,3 +12,7 @@ New Idea List
   - [ ] history of music consumption
 - [ ] History of the shoe
 - [ ] Are StackOverflow answers really pretentious?
+- [ ] Have websites headers/titles gotten larger overtime??
+- [ ] 100k a year rent prices... 10k a month?
+- [ ] Housing prices
+- [ ] anything with R and a unique map projection
