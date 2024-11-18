@@ -17,5 +17,5 @@
 - [X] Fix horizonal scroll on mobile
 - [X] Make tags work
 - [ ] Update write date
-- [ ] Fix domain (www.mitchellgreen.dev)
+- [ ] ~~Fix domain (www.mitchellgreen.dev)~~
 - [ ] Update tags in articles
